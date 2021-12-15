@@ -1,6 +1,4 @@
 import 'package:country_code_picker/country_code_picker.dart';
-import 'package:education_app/MyThemeData.dart';
-import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Chose_Register.dart';
 import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Father/Register_For_Father.dart';
 import 'package:education_app/Ui/parent/parent.dart';
 import 'package:flutter/material.dart';
@@ -42,10 +40,8 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                   ),
                   Text(
                     'قم بتسجيل الدخول ك ولي أمر الان',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(fontWeight: FontWeight.w400, fontSize: 23),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 23, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(

@@ -41,7 +41,11 @@ class _StatisticsState extends State<Statistics> {
                   SizedBox(
                     width: 9,
                   ),
-                  Text('مرحبا بك يا   \n استاذ احمد'),
+                  Text(
+                    'مرحبا بك يا   \n استاذ احمد',
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 13, color: Colors.white),
+                  ),
                 ],
               ),
             ),
@@ -66,7 +70,8 @@ class _StatisticsState extends State<Statistics> {
                 color: Theme.of(context).primaryColor,
                 child: Text(
                   'الاحصائيات',
-                  style: TextStyle(fontSize: 25),
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 25, color: Colors.white),
                   textAlign: TextAlign.center,
                 ),
               ),
@@ -82,11 +87,11 @@ class _StatisticsState extends State<Statistics> {
                     padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
                     color: Colors.grey,
                     child: Text(
-                      'نتأج الامتحانات',
+                      'نتائج الامتحانات',
                       style: TextStyle(
-                          color: Colors.black,
+                          fontFamily: "Cairo",
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          color: Colors.black),
                     ),
                   ),
                 ),
@@ -105,9 +110,9 @@ class _StatisticsState extends State<Statistics> {
                     child: Text(
                       'الغياب والحضور',
                       style: TextStyle(
-                          color: Colors.black,
+                          fontFamily: "Cairo",
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          color: Colors.black),
                     ),
                   ),
                 ),
@@ -126,9 +131,9 @@ class _StatisticsState extends State<Statistics> {
                     child: Text(
                       'عدد الطلاب المشتركين',
                       style: TextStyle(
-                          color: Colors.black,
+                          fontFamily: "Cairo",
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          color: Colors.black),
                     ),
                   ),
                 ),
@@ -147,9 +152,9 @@ class _StatisticsState extends State<Statistics> {
                     child: Text(
                       'الحسابات',
                       style: TextStyle(
-                          color: Colors.black,
+                          fontFamily: "Cairo",
                           fontSize: 18,
-                          fontWeight: FontWeight.bold),
+                          color: Colors.black),
                     ),
                   ),
                 ),

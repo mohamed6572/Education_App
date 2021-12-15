@@ -43,9 +43,12 @@ class Add_stud extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                Course_Wiget('اسم الطالب'),
-                Course_Wiget('    المرجله'),
-                Course_Wiget(' المجموعة'),
+                Course_Wiget('         المرحلة '),
+                Course_Wiget('           الصف   '),
+                Course_Wiget('   المجموعه'),
+                Course_Wiget('    اسم الطالب'),
+                Course_Wiget('         المرجله'),
+                Course_Wiget('    المجموعة'),
                 SizedBox(
                   height: 30,
                 ),

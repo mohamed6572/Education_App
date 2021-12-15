@@ -51,7 +51,10 @@ class Register_For_Secertary extends StatelessWidget {
                       padding: const EdgeInsets.all(5.0),
                       child: Text(
                         'ابدأ',
-                        style: Theme.of(context).textTheme.headline1,
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.black),
                       ),
                     ),
                   ),

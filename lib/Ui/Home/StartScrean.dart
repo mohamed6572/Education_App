@@ -24,7 +24,11 @@ class Start_Screan extends StatelessWidget {
               onPressed: () {
                 Navigator.pushReplacementNamed(context, For_All.routeName);
               },
-              child: Text('Start'),
+              child: Text(
+                'ابدأ',
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25, color: Colors.black),
+              ),
             ),
           ],
         ),

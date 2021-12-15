@@ -24,7 +24,8 @@ class For_All_Widget2 extends StatelessWidget {
           padding: const EdgeInsets.all(8.0),
           child: Text(
             text2,
-            style: Theme.of(context).textTheme.headline2,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
         ),
         Container(
@@ -45,7 +46,8 @@ class For_All_Widget2 extends StatelessWidget {
             },
             child: Text(
               text,
-              style: Theme.of(context).textTheme.headline2,
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),

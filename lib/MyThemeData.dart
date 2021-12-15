@@ -10,17 +10,17 @@ class MyThemeData {
       primaryColor: primaryColorDark,
       scaffoldBackgroundColor: primaryColorLight,
       textTheme: TextTheme(
-          headline1: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          headline1:
+              TextStyle(fontFamily: "Cairo", fontSize: 18, color: Colors.black),
           headline2: TextStyle(
-              fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black)));
+              fontFamily: "Cairo", fontSize: 15, color: Colors.black)));
   static final ThemeData LightTheme = ThemeData(
       backgroundColor: primaryColorDark,
       primaryColor: primaryColorLight,
       scaffoldBackgroundColor: primaryColorLight,
       textTheme: TextTheme(
-          headline1: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 18, color: Colors.black),
+          headline1:
+              TextStyle(fontFamily: "Cairo", fontSize: 18, color: Colors.black),
           headline2: TextStyle(
-              fontSize: 15, fontWeight: FontWeight.bold, color: Colors.black)));
+              fontFamily: "Cairo", fontSize: 15, color: Colors.black)));
 }

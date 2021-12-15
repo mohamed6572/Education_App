@@ -20,7 +20,8 @@ class _Exam_Widget extends State<Exam_Widget> {
         children: [
           Text(
             widget.text,
-            style: Theme.of(context).textTheme.headline2,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
           Checkbox(
               value: _Check,

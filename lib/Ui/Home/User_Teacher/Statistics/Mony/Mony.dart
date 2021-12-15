@@ -27,7 +27,10 @@ class _MonyState extends State<Mony> {
                     },
                     child: Text(
                       'الشهر',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
                 ElevatedButton(
                     onPressed: () {
@@ -36,7 +39,10 @@ class _MonyState extends State<Mony> {
                     },
                     child: Text(
                       'حجز مذكرات',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
               ],
             ),

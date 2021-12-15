@@ -50,7 +50,10 @@ class _User_StudentState extends State<User_Student> {
                     },
                     child: Text(
                       'مرحبا بك \n يا احمد',
-                      style: TextStyle(fontSize: 15),
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 13,
+                          color: Colors.white),
                     )),
                 Spacer(),
                 IconButton(
@@ -85,7 +88,8 @@ class _User_StudentState extends State<User_Student> {
               color: Theme.of(context).primaryColor,
               child: Text(
                 'EducationApp',
-                style: TextStyle(fontSize: 25),
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25, color: Colors.white),
                 textAlign: TextAlign.center,
               ),
             ),
@@ -104,9 +108,7 @@ class _User_StudentState extends State<User_Student> {
                   child: Text(
                     'المواد الدراسية',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ),
               ),
@@ -125,9 +127,7 @@ class _User_StudentState extends State<User_Student> {
                   child: Text(
                     'الامتحانات',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ),
               ),
@@ -146,9 +146,7 @@ class _User_StudentState extends State<User_Student> {
                   child: Text(
                     'البث المباشر',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ),
               ),
@@ -167,9 +165,7 @@ class _User_StudentState extends State<User_Student> {
                   child: Text(
                     'التواصل',
                     style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 18,
-                        fontWeight: FontWeight.bold),
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ),
               ),

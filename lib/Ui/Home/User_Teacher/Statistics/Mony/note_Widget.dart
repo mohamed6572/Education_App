@@ -33,7 +33,8 @@ class Note_Widget extends StatelessWidget {
           ),
           Text(
             text,
-            style: Theme.of(context).textTheme.headline2,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
         ],
       ),

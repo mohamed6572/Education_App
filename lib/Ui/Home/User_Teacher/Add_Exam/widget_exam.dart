@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 
 import 'Chose_Widget.dart';
-import 'answare_Widget.dart';
 
 class add_ex extends StatefulWidget {
   @override
@@ -19,7 +18,6 @@ class _add_exState extends State<add_ex> {
         padding: const EdgeInsets.symmetric(vertical: 8.0),
         child: Row(
           children: [
-            answare_Widget(''),
             Row(
               children: [
                 Padding(

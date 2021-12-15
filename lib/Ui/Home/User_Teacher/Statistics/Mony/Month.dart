@@ -25,8 +25,8 @@ class _MonthState extends State<Month> {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               'الشهر',
-              style:
-                  Theme.of(context).textTheme.headline1!.copyWith(fontSize: 25),
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 25, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),
@@ -62,7 +62,8 @@ class _MonthState extends State<Month> {
               ),
               Text(
                 'حالة الدفع',
-                style: Theme.of(context).textTheme.headline2,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 15, color: Colors.black),
               ),
               SizedBox(
                 height: 50,
@@ -76,7 +77,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'الاسم',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -91,7 +93,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'م',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
             ],
@@ -128,7 +131,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 4.0),
                 child: Text(
                   'محمد هشام',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -166,8 +170,9 @@ class _MonthState extends State<Month> {
                 width: 20,
               ),
               Text(
-                'امتنعو عن دفع الشهر',
-                style: Theme.of(context).textTheme.headline2,
+                'امتنعوا عن دفع الشهر',
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 15, color: Colors.black),
               ),
               SizedBox(
                 height: 50,
@@ -181,7 +186,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'الاسم',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -196,7 +202,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'م',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
             ],
@@ -233,7 +240,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 4.0),
                 child: Text(
                   'احمد هشام',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -248,7 +256,8 @@ class _MonthState extends State<Month> {
                 padding: const EdgeInsets.only(right: 4.0),
                 child: Text(
                   '-1',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
             ],

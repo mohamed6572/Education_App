@@ -13,26 +13,20 @@ class Exam extends StatelessWidget {
             children: [
               Text(
                 'لغة عربية',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline1
-                    ?.copyWith(fontSize: 30),
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 30, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
               Text(
                 'الوحدة الاولى ',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline1
-                    ?.copyWith(fontSize: 25),
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
               Text(
                 'الدرس اسم الفاعل ',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline1
-                    ?.copyWith(fontSize: 25),
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -54,7 +48,10 @@ class Exam extends StatelessWidget {
                     ),
                     Text(
                       'الوقت\n١٠ دقائق  ',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )
                   ],
                 ),
@@ -62,8 +59,9 @@ class Exam extends StatelessWidget {
                   width: 20,
                 ),
                 Text(
-                  ' عدد الاسئلة  \n  ١٠  اسألة ',
-                  style: Theme.of(context).textTheme.headline1,
+                  ' عدد الاسئلة  \n     ١٠  اسئلة ',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                 ),
               ],
             ),
@@ -72,25 +70,29 @@ class Exam extends StatelessWidget {
             height: 20,
           ),
           Text(
-            '١- اقرأ الاسئلة جيدا ولاتتسرع في الاجابة ',
-            style: Theme.of(context).textTheme.headline2,
+            '. ١- اقرأ الاسئلة جيدا ولاتتسرع في الاجابة ',
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              '٢- يمكنك تخطي اي سؤال والعودة له مرة اخرى ',
-              style: Theme.of(context).textTheme.headline2,
+              '. ٢- يمكنك تخطي اي سؤال والعودة له مرة اخرى ',
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
             ),
           ),
           Text(
-            '٣- انتبه الى الوقت وحاول ان تنتهي قبل نهاية الوقت ',
-            style: Theme.of(context).textTheme.headline2,
+            ' . ٣- انتبه الى الوقت وحاول ان تنتهي قبل نهاية الوقت ',
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Text(
-              '٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة ',
-              style: Theme.of(context).textTheme.headline2,
+              '. ٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة ',
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
             ),
           ),
           SizedBox(
@@ -102,7 +104,8 @@ class Exam extends StatelessWidget {
             },
             child: Text(
               'جاهز للامتحان ....ابدأ',
-              style: Theme.of(context).textTheme.headline1,
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
             ),
             style: ButtonStyle(
                 backgroundColor: MaterialStateProperty.all(Colors.green)),

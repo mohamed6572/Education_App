@@ -28,7 +28,11 @@ class Add extends StatelessWidget {
                 SizedBox(
                   width: 9,
                 ),
-                Text('مرحبا بك يا   \n استاذ احمد'),
+                Text(
+                  'مرحبا بك يا   \n استاذ احمد',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 13, color: Colors.white),
+                ),
               ],
             ),
           )
@@ -64,7 +68,8 @@ class Add extends StatelessWidget {
                   child: Text(
                     'وصف الاعلان',
                     textAlign: TextAlign.end,
-                    style: Theme.of(context).textTheme.headline1,
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ),
                 Container(
@@ -95,10 +100,8 @@ class Add extends StatelessWidget {
                   onPressed: () {},
                   child: Text(
                     'اضف',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(color: Colors.white),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.white),
                   )),
             )
           ],

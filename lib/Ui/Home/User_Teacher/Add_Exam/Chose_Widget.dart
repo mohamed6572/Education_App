@@ -13,10 +13,11 @@ class Chose_Widget extends StatelessWidget {
         children: [
           Text(
             text,
-            style: Theme.of(context).textTheme.headline2,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
           Container(
-            width: 200,
+            width: 300,
             height: 50,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),

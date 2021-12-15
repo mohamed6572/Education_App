@@ -20,7 +20,11 @@ class _Parent_widgetState extends State<Parent_widget> {
             Text(widget.text),
             Padding(
                 padding: const EdgeInsets.only(right: 8.0, left: 10),
-                child: Text(widget.text2)),
+                child: Text(
+                  widget.text2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.red),
+                )),
           ],
         ),
         SizedBox(

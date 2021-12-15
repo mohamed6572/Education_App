@@ -23,7 +23,10 @@ class _SettingsState extends State<Settings> {
         children: [
           Text(
             'اللغة',
-            style: TextStyle(fontSize: 18),
+            style: TextStyle(
+              fontSize: 18,
+              fontFamily: "Cairo",
+            ),
           ),
           InkWell(
             onTap: () {
@@ -58,7 +61,10 @@ class _SettingsState extends State<Settings> {
               ),
             ),
           ),
-          Text("النمط"),
+          Text(
+            "النمط",
+            style: TextStyle(fontFamily: "Cairo", fontSize: 18),
+          ),
           InkWell(
             onTap: () {
               showThemeBottomSheet();

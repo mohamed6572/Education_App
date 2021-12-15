@@ -33,7 +33,8 @@ class Course_Wiget extends StatelessWidget {
             padding: const EdgeInsets.only(right: 8.0),
             child: Text(
               text,
-              style: Theme.of(context).textTheme.headline1,
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 18, color: Colors.black),
             ),
           ),
         ],

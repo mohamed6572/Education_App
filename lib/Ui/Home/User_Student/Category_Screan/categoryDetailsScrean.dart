@@ -20,10 +20,8 @@ class CategoryDetailsScrean extends StatelessWidget {
               ),
               Text(
                 'الوحدة الاولى : اسم الفاعل',
-                style: Theme.of(context)
-                    .textTheme
-                    .headline1
-                    ?.copyWith(fontSize: 25),
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25, color: Colors.black),
                 textAlign: TextAlign.center,
               ),
             ],
@@ -34,7 +32,7 @@ class CategoryDetailsScrean extends StatelessWidget {
           Container(
             width: 80,
             height: 50,
-            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+            padding: EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             decoration: BoxDecoration(
                 color: Colors.blue,
                 border: Border(
@@ -44,7 +42,8 @@ class CategoryDetailsScrean extends StatelessWidget {
                 )),
             child: Text(
               'الشرح',
-              style: Theme.of(context).textTheme.headline1,
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 18, color: Colors.black),
             ),
           ),
           Spacer(),
@@ -75,7 +74,8 @@ class CategoryDetailsScrean extends StatelessWidget {
               onPressed: () {},
               child: Text(
                 'ابدأ الاختبار',
-                style: Theme.of(context).textTheme.headline1,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 18, color: Colors.black),
               ),
               style: ButtonStyle(
                   elevation: MaterialStateProperty.all(5),
@@ -88,7 +88,8 @@ class CategoryDetailsScrean extends StatelessWidget {
             children: [
               Text(
                 'التعليقات',
-                style: Theme.of(context).textTheme.headline1,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 18, color: Colors.black),
               ),
               Image.asset(
                 'assets/images/comment.jpg',

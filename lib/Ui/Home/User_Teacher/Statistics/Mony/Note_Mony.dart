@@ -24,8 +24,8 @@ class _Note_MonyState extends State<Note_Mony> {
             padding: const EdgeInsets.all(10.0),
             child: Text(
               'حجز المذكرات',
-              style:
-                  Theme.of(context).textTheme.headline1!.copyWith(fontSize: 25),
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 25, color: Colors.black),
               textAlign: TextAlign.center,
             ),
           ),
@@ -54,7 +54,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(left: 8.0),
                 child: Text(
                   'تاريخ الحجز',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -67,7 +68,8 @@ class _Note_MonyState extends State<Note_Mony> {
               ),
               Text(
                 'حالة الدفع',
-                style: Theme.of(context).textTheme.headline2,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 15, color: Colors.black),
               ),
               SizedBox(
                 height: 50,
@@ -81,7 +83,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'الاسم',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -96,7 +99,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'م',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
             ],
@@ -145,7 +149,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 4.0),
                 child: Text(
                   'محمد هشام',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -183,8 +188,9 @@ class _Note_MonyState extends State<Note_Mony> {
                 width: 20,
               ),
               Text(
-                'استغنو عن الحجز',
-                style: Theme.of(context).textTheme.headline2,
+                'امتعنوا عن الحجز',
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 15, color: Colors.black),
               ),
               SizedBox(
                 height: 50,
@@ -198,7 +204,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'الاسم',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(
@@ -213,7 +220,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 10.0),
                 child: Text(
                   'م',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
             ],
@@ -234,7 +242,13 @@ class _Note_MonyState extends State<Note_Mony> {
                       padding: const EdgeInsets.only(right: 8.0, left: 10),
                       child: Column(
                         children: [
-                          Text('لا'),
+                          Text(
+                            'لا',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 15,
+                                color: Colors.black),
+                          ),
                           Checkbox(
                               value: _Check1,
                               activeColor: Colors.green,
@@ -249,7 +263,13 @@ class _Note_MonyState extends State<Note_Mony> {
                       padding: const EdgeInsets.only(right: 8.0, left: 10),
                       child: Column(
                         children: [
-                          Text('نعم'),
+                          Text(
+                            'نعم',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 15,
+                                color: Colors.black),
+                          ),
                           Checkbox(
                               value: _Check2,
                               activeColor: Colors.green,
@@ -274,7 +294,8 @@ class _Note_MonyState extends State<Note_Mony> {
                 padding: const EdgeInsets.only(right: 4.0),
                 child: Text(
                   'احمد هشام',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               SizedBox(

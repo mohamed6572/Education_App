@@ -19,10 +19,8 @@ class _accountset_techState extends State<account_tech> {
         centerTitle: true,
         title: Text(
           'اعدادات الحساب',
-          style: Theme.of(context)
-              .textTheme
-              .headline1!
-              .copyWith(color: Colors.blue, fontSize: 25),
+          style:
+              TextStyle(fontFamily: "Cairo", fontSize: 25, color: Colors.blue),
         ),
       ),
       body: Container(
@@ -47,7 +45,8 @@ class _accountset_techState extends State<account_tech> {
                 Text(
                   'تغير اسم المستخدم',
                   textAlign: TextAlign.end,
-                  style: Theme.of(context).textTheme.headline1,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                 ),
                 Container(
                   margin: EdgeInsets.all(5),
@@ -71,7 +70,8 @@ class _accountset_techState extends State<account_tech> {
                 Text(
                   'تغير الباسورد',
                   textAlign: TextAlign.end,
-                  style: Theme.of(context).textTheme.headline1,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                 ),
                 Container(
                   margin: EdgeInsets.all(5),

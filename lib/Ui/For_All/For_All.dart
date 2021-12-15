@@ -31,7 +31,8 @@ class For_All extends StatelessWidget {
                   ),
                   Text(
                     '.........بحث',
-                    style: Theme.of(context).textTheme.headline2,
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 20, color: Colors.black),
                   ),
                 ],
               ),
@@ -70,8 +71,11 @@ class For_All extends StatelessWidget {
                         Navigator.pushNamed(context, Chose_Register.routeName);
                       },
                       child: Text(
-                        'كورسات مدفوعه',
-                        style: Theme.of(context).textTheme.headline1,
+                        'حسابي',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 20,
+                            color: Colors.black),
                       ),
                     ),
                     SizedBox(
@@ -89,12 +93,13 @@ class For_All extends StatelessWidget {
                       width: 5,
                     ),
                     InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, Chose_Register.routeName);
-                      },
+                      onTap: () {},
                       child: Text(
-                        'حسابي',
-                        style: Theme.of(context).textTheme.headline1,
+                        'كورسات مدفوعه',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 20,
+                            color: Colors.black),
                       ),
                     ),
                   ],
@@ -167,7 +172,10 @@ class For_All extends StatelessWidget {
                   children: [
                     Text(
                       'عرض الجميع',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 15,
+                          color: Colors.black),
                     ),
                     Container(
                       padding: EdgeInsets.all(8),
@@ -179,7 +187,10 @@ class For_All extends StatelessWidget {
                           )),
                       child: Text(
                         '  المواد',
-                        style: Theme.of(context).textTheme.headline2,
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 15,
+                            color: Colors.black),
                       ),
                     )
                   ],
@@ -216,7 +227,10 @@ class For_All extends StatelessWidget {
                   children: [
                     Text(
                       'عرض الجميع',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 15,
+                          color: Colors.black),
                     ),
                     Container(
                       padding: EdgeInsets.all(8),
@@ -228,7 +242,10 @@ class For_All extends StatelessWidget {
                           )),
                       child: Text(
                         ' الكورسات',
-                        style: Theme.of(context).textTheme.headline2,
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 15,
+                            color: Colors.black),
                       ),
                     )
                   ],
@@ -245,7 +262,7 @@ class For_All extends StatelessWidget {
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            "    مستر عبدالرحمن الحماقي  \n         مدرس لغة عربية   ",
+                            "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
@@ -254,7 +271,7 @@ class For_All extends StatelessWidget {
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            " مستر اسماعيل حسنين  \n   مدرس لغة انجليزية    ",
+                            " مستر اسماعيل حسانين  \n   مدرس لغة انجليزية    ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
@@ -268,7 +285,7 @@ class For_All extends StatelessWidget {
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
-                        text2: "   مستر ايمن الشحات  \n       مدرس ناريخ   ",
+                        text2: "   مستر ايمن الشحات  \n       مدرس تاريخ   ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
@@ -307,7 +324,10 @@ class For_All extends StatelessWidget {
                   children: [
                     Text(
                       'عرض الجميع',
-                      style: Theme.of(context).textTheme.headline2,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 15,
+                          color: Colors.black),
                     ),
                     Container(
                       padding: EdgeInsets.all(8),
@@ -319,7 +339,10 @@ class For_All extends StatelessWidget {
                           )),
                       child: Text(
                         ' البث المباشر',
-                        style: Theme.of(context).textTheme.headline2,
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 15,
+                            color: Colors.black),
                       ),
                     )
                   ],

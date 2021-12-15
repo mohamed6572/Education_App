@@ -13,7 +13,8 @@ class answare_Widget extends StatelessWidget {
         children: [
           Text(
             text,
-            style: Theme.of(context).textTheme.headline2,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           ),
           Container(
             width: 80,

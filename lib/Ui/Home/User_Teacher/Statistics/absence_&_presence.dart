@@ -27,22 +27,36 @@ class _absence_presenceState extends State<absence_presence> {
               SizedBox(
                 height: 20,
               ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  stat_widget('الصف'),
-                  stat_widget('مجموعة الساعة'),
-                ],
-              ),
-              SizedBox(
-                height: 20,
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  stat_widget('المرحلة الدراسية'),
-                  stat_widget('               الشهر'),
-                ],
+              SingleChildScrollView(
+                padding: EdgeInsets.all(10),
+                scrollDirection: Axis.horizontal,
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        stat_widget('الصف'),
+                        SizedBox(
+                          width: 140,
+                        ),
+                        stat_widget('مجموعة الساعة'),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        stat_widget('المرحلة الدراسية'),
+                        SizedBox(
+                          width: 80,
+                        ),
+                        stat_widget('               الشهر'),
+                      ],
+                    ),
+                  ],
+                ),
               ),
               SizedBox(
                 height: 40,
@@ -141,13 +155,25 @@ class _absence_presenceState extends State<absence_presence> {
             child: ElevatedButton(
               onPressed: () {},
               child: Text(
-                'حفظ \nطباعة',
+                'حفظ ',
                 style: Theme.of(context).textTheme.headline1,
               ),
               style: ButtonStyle(
                   backgroundColor: MaterialStateProperty.all(Colors.indigo)),
             ),
-          )
+          ),
+          Container(
+            width: 200,
+            child: ElevatedButton(
+              onPressed: () {},
+              child: Text(
+                'طباعة',
+                style: Theme.of(context).textTheme.headline1,
+              ),
+              style: ButtonStyle(
+                  backgroundColor: MaterialStateProperty.all(Colors.indigo)),
+            ),
+          ),
         ],
       ),
     ));

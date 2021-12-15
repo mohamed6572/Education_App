@@ -26,7 +26,8 @@ class For_All_Widget extends StatelessWidget {
             )),
         child: Text(
           text,
-          style: Theme.of(context).textTheme.headline2,
+          style:
+              TextStyle(fontFamily: "Cairo", fontSize: 15, color: Colors.black),
           textAlign: TextAlign.center,
         ),
       ),

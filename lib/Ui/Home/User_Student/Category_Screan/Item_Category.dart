@@ -52,7 +52,8 @@ class CategoryGridWidget extends StatelessWidget {
             ),
             Text(
               category.title,
-              style: Theme.of(context).textTheme.headline4,
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 29, color: Colors.black),
             ),
           ],
         ),

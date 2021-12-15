@@ -25,13 +25,15 @@ class WidgetRegs extends StatelessWidget {
           ),
           Text(
             '-:',
-            style: Theme.of(context).textTheme.headline1,
+            style: TextStyle(
+                fontFamily: "Cairo", fontSize: 18, color: Colors.black),
           ),
           Expanded(
               flex: 1,
               child: Text(
                 text,
-                style: Theme.of(context).textTheme.headline1,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 18, color: Colors.black),
               )),
         ],
       ),

@@ -39,10 +39,8 @@ class _Login_ScreanState extends State<Login_Screan> {
                   ),
                   Text(
                     'قم بتسجيل الدخول ك سكرتير الان',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(fontWeight: FontWeight.w400, fontSize: 23),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 23, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
@@ -121,7 +119,13 @@ class _Login_ScreanState extends State<Login_Screan> {
                       children: [
                         Row(
                           children: [
-                            Text('تذكرني لاحقا'),
+                            Text(
+                              'تذكرني لاحقا',
+                              style: TextStyle(
+                                  fontFamily: "Cairo",
+                                  fontSize: 15,
+                                  color: Colors.black),
+                            ),
                             Checkbox(
                                 value: _checked,
                                 onChanged: (bool? value) {
@@ -135,7 +139,10 @@ class _Login_ScreanState extends State<Login_Screan> {
                             onPressed: () {},
                             child: Text(
                               'هل نسيت الرقم السري؟',
-                              style: TextStyle(color: Colors.blue),
+                              style: TextStyle(
+                                  fontFamily: "Cairo",
+                                  fontSize: 15,
+                                  color: Colors.blue),
                             )),
                       ],
                     ),
@@ -149,7 +156,13 @@ class _Login_ScreanState extends State<Login_Screan> {
                         onPressed: () {},
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Text('تسجيل الدخول'),
+                          child: Text(
+                            'تسجيل الدخول',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 15,
+                                color: Colors.white),
+                          ),
                         )),
                     width: 200,
                   ),
@@ -163,7 +176,10 @@ class _Login_ScreanState extends State<Login_Screan> {
                       },
                       child: Text(
                         'تسجيل حساب جديد',
-                        style: TextStyle(color: Colors.blue, fontSize: 18),
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.blue),
                       )),
                 ],
               ),

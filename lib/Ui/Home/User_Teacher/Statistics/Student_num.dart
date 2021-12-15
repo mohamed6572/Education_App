@@ -33,7 +33,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
                   'المرحلة',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],
@@ -62,8 +63,9 @@ class Student_num extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
-                  'المرحلة',
-                  style: Theme.of(context).textTheme.headline2,
+                  'الصف',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],
@@ -78,7 +80,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Text(
                   'طالب',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               Container(
@@ -100,7 +103,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
                   ' -:مجموعة الساعة ',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],
@@ -115,7 +119,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Text(
                   'طالب',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               Container(
@@ -137,7 +142,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
                   ' -:مجموعة الساعة ',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],
@@ -152,7 +158,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Text(
                   'طالب',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               Container(
@@ -174,7 +181,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 10.0),
                 child: Text(
                   ' -:مجموعة الساعة ',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],
@@ -189,7 +197,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 15.0),
                 child: Text(
                   'طالب',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               ),
               Container(
@@ -211,7 +220,8 @@ class Student_num extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: Text(
                   'اجمالي الطلاب',
-                  style: Theme.of(context).textTheme.headline2,
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 15, color: Colors.black),
                 ),
               )
             ],

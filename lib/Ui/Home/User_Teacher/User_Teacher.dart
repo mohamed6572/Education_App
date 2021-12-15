@@ -42,7 +42,13 @@ class User_Teacher extends StatelessWidget {
                     onTap: () {
                       Navigator.pushNamed(context, account_tech.routeName);
                     },
-                    child: Text('مرحبا بك يا   \n استاذ احمد')),
+                    child: Text(
+                      'مرحبا بك يا    \n استاذ احمد',
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 13,
+                          color: Colors.white),
+                    )),
               ],
             ),
           )
@@ -68,7 +74,7 @@ class User_Teacher extends StatelessWidget {
                       Navigator.pushNamed(context, Stream_Teacher.routeName);
                     },
                     child: teacher_Widget(
-                      text: '\nبث مباشر',
+                      text: 'إضافة\n بث مباشر',
                       color: Colors.lightGreen,
                     ),
                   ),
@@ -92,7 +98,7 @@ class User_Teacher extends StatelessWidget {
                       Navigator.pushNamed(context, Course.routeName);
                     },
                     child: teacher_Widget(
-                      text: '\nالكورس',
+                      text: 'إضافة الكورس',
                       color: Colors.lightGreenAccent,
                     ),
                   ),
@@ -117,7 +123,7 @@ class User_Teacher extends StatelessWidget {
                       Navigator.pushNamed(context, Statistics.routeName);
                     },
                     child: teacher_Widget(
-                      text: '\nالاحصائيات',
+                      text: 'النتائج والاحصائيات',
                       color: Colors.tealAccent,
                     ),
                   ),
@@ -150,34 +156,47 @@ class User_Teacher extends StatelessWidget {
           SizedBox(
             height: MediaQuery.of(context).size.height * 0.04,
           ),
-          Padding(
-            padding: const EdgeInsets.all(2.0),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.03,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, Add.routeName);
-                  },
-                  child: teacher_Widget(
-                    text: 'إضافة \nإعلان ',
-                    color: Colors.tealAccent,
+          SingleChildScrollView(
+            scrollDirection: Axis.horizontal,
+            child: Padding(
+              padding: const EdgeInsets.all(2.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.03,
                   ),
-                ),
-                SizedBox(
-                  width: 8,
-                ),
-                InkWell(
-                  onTap: () {
-                    Navigator.pushNamed(context, Add_stud.routeName);
-                  },
-                  child:
-                      teacher_Widget(text: 'إضافة \nطالب ', color: Colors.teal),
-                ),
-              ],
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Add.routeName);
+                    },
+                    child: teacher_Widget(
+                      text: 'إضافة \nإعلان ',
+                      color: Colors.tealAccent,
+                    ),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Add_stud.routeName);
+                    },
+                    child: teacher_Widget(
+                        text: 'إضافة \nطالب ', color: Colors.teal),
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  InkWell(
+                    onTap: () {
+                      Navigator.pushNamed(context, Add_stud.routeName);
+                    },
+                    child: teacher_Widget(
+                        text: 'التواصل\n مع الطلاب', color: Colors.teal),
+                  ),
+                ],
+              ),
             ),
           )
         ],

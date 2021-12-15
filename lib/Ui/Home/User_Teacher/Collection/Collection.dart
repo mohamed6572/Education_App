@@ -28,7 +28,11 @@ class Collection extends StatelessWidget {
                 SizedBox(
                   width: 9,
                 ),
-                Text('مرحبا بك يا   \n استاذ احمد'),
+                Text(
+                  'مرحبا بك يا   \n استاذ احمد',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 13, color: Colors.white),
+                ),
               ],
             ),
           )
@@ -43,28 +47,52 @@ class Collection extends StatelessWidget {
               SizedBox(
                 height: MediaQuery.of(context).size.height * 0.02,
               ),
-              Course_Wiget('اسم  المجموعه'),
-              Course_Wiget('      اسم الصف  '),
+              Course_Wiget('           المرحلة '),
+              Course_Wiget('              الصف   '),
+              Course_Wiget('      المجموعه'),
               Course_Wiget('     اسم المادة '),
-              Course_Wiget('إضافة مجموعة'),
               SizedBox(
                 height: 40,
               ),
-              Row(mainAxisAlignment: MainAxisAlignment.end, children: [
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                          padding: MaterialStateProperty.all(
-                              EdgeInsets.symmetric(
-                                  horizontal: 80, vertical: 5))),
-                      onPressed: () {},
-                      child: Text(
-                        'حفظ',
-                        style: Theme.of(context).textTheme.headline1,
-                      )),
-                ),
-              ]),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                            backgroundColor:
+                                MaterialStateProperty.all(Colors.red),
+                            padding: MaterialStateProperty.all(
+                                EdgeInsets.symmetric(
+                                    horizontal: 60, vertical: 5))),
+                        onPressed: () {},
+                        child: Text(
+                          'حذف',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 18,
+                              color: Colors.black),
+                        )),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                    child: ElevatedButton(
+                        style: ButtonStyle(
+                            padding: MaterialStateProperty.all(
+                                EdgeInsets.symmetric(
+                                    horizontal: 60, vertical: 5))),
+                        onPressed: () {},
+                        child: Text(
+                          'حفظ',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 18,
+                              color: Colors.black),
+                        )),
+                  ),
+                ]),
+              ),
             ],
           ),
         ),

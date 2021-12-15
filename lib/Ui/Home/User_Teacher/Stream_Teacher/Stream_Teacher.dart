@@ -28,7 +28,11 @@ class Stream_Teacher extends StatelessWidget {
                 SizedBox(
                   width: 9,
                 ),
-                Text('مرحبا بك يا   \n استاذ احمد'),
+                Text(
+                  'مرحبا بك يا   \n استاذ احمد',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 13, color: Colors.white),
+                ),
               ],
             ),
           )
@@ -41,10 +45,12 @@ class Stream_Teacher extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
+            Course_Wiget('       المرحلة '),
+            Course_Wiget('  اسم الصف  '),
+            Course_Wiget('  المجموعة '),
+            Course_Wiget('    اسم درس  '),
+            Course_Wiget('    موعد البث  '),
             Course_Wiget('إضافة لينك '),
-            Course_Wiget('   اسم درس  '),
-            Course_Wiget('   موعد البث '),
-            Course_Wiget('  اسم الصف '),
             SizedBox(
               height: 40,
             ),
@@ -55,19 +61,28 @@ class Stream_Teacher extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'معاينة',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
                 ElevatedButton(
                     onPressed: () {},
                     child: Text(
                       'حذف',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
                 ElevatedButton(
                     onPressed: () {},
                     child: Text(
                       'حفظ',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
               ],
             )

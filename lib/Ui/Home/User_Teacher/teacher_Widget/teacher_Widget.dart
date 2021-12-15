@@ -17,7 +17,8 @@ class teacher_Widget extends StatelessWidget {
         padding: EdgeInsets.all(9),
         child: Text(
           text,
-          style: Theme.of(context).textTheme.headline1!.copyWith(fontSize: 25),
+          style:
+              TextStyle(fontFamily: "Cairo", fontSize: 23, color: Colors.black),
           textAlign: TextAlign.center,
         ),
       ),

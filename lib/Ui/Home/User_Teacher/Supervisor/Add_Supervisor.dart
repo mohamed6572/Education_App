@@ -28,7 +28,11 @@ class Add_Supervisor extends StatelessWidget {
                 SizedBox(
                   width: 9,
                 ),
-                Text('مرحبا بك يا   \n استاذ احمد'),
+                Text(
+                  'مرحبا بك يا   \n استاذ احمد',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 13, color: Colors.white),
+                ),
               ],
             ),
           )
@@ -41,18 +45,27 @@ class Add_Supervisor extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Course_Wiget('     إضافة مشرف  '),
-            Course_Wiget('المرحلة الدراسية'),
-            Course_Wiget('         اسم الصف  '),
-            Course_Wiget('    اسم المجموعة'),
-            Course_Wiget('          اسم المادة'),
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Course_Wiget('                 المرحلة '),
+                  Course_Wiget('                    الصف   '),
+                  Course_Wiget('           المجموعه'),
+                  Course_Wiget('       اسم المشرف  '),
+                  Course_Wiget('   اسم المجموعة'),
+                  Course_Wiget('          اسم المادة'),
+                ],
+              ),
+            ),
             SizedBox(
               height: 20,
             ),
             Text(
               'الصلاحيات',
-              style:
-                  Theme.of(context).textTheme.headline1!.copyWith(fontSize: 25),
+              style: TextStyle(
+                  fontFamily: "Cairo", fontSize: 25, color: Colors.black),
               textAlign: TextAlign.center,
             ),
             SingleChildScrollView(
@@ -60,11 +73,11 @@ class Add_Supervisor extends StatelessWidget {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Supervisor_Widget('إضافة كورسات و امتحانات'),
+                  Supervisor_Widget('. إضافة كورسات و امتحانات'),
                   SizedBox(
                     width: 20,
                   ),
-                  Supervisor_Widget('الموافقة على الطلبات'),
+                  Supervisor_Widget('. الموافقة على الطلبات'),
                 ],
               ),
             ),
@@ -76,25 +89,25 @@ class Add_Supervisor extends StatelessWidget {
                   SizedBox(
                     width: 50,
                   ),
-                  Supervisor_Widget('نتأج الامتحانات'),
+                  Supervisor_Widget('. نتائج الامتحانات'),
                   SizedBox(width: 45),
-                  Supervisor_Widget('الحضور والغياب'),
+                  Supervisor_Widget('. الحضور والغياب '),
                 ],
               ),
             ),
             SingleChildScrollView(
               scrollDirection: Axis.horizontal,
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   SizedBox(
                     width: 80,
                   ),
-                  Supervisor_Widget('المدفوعات'),
+                  Supervisor_Widget('. المدفوعات'),
                   SizedBox(
-                    width: 15,
+                    width: 35,
                   ),
-                  Supervisor_Widget('إضافة إعلانات التواصل'),
+                  Supervisor_Widget('. الاعلانات و التواصل'),
                 ],
               ),
             ),
@@ -105,16 +118,24 @@ class Add_Supervisor extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 ElevatedButton(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(Colors.red)),
                     onPressed: () {},
                     child: Text(
-                      'حفظ',
-                      style: Theme.of(context).textTheme.headline1,
+                      'حذف',
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
                 ElevatedButton(
                     onPressed: () {},
                     child: Text(
-                      'معاينة',
-                      style: Theme.of(context).textTheme.headline1,
+                      'حفظ',
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
                     )),
               ],
             )

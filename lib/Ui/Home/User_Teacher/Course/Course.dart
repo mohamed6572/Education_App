@@ -1,5 +1,6 @@
 import 'package:education_app/MyThemeData.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Course/widget_Course.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class Course extends StatelessWidget {
@@ -41,7 +42,9 @@ class Course extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            Course_Wiget('إضافة درس '),
+            Course_Wiget('      المرحلة '),
+            Course_Wiget('         الصف   '),
+            Course_Wiget(' المجموعه'),
             Course_Wiget('اسم الوحدة'),
             Course_Wiget(' اسم الدرس '),
             Padding(
@@ -64,12 +67,15 @@ class Course extends StatelessWidget {
                         color: Colors.white),
                     child: Padding(
                       padding: const EdgeInsets.symmetric(
-                          vertical: 13.0, horizontal: 10),
+                          vertical: 12.0, horizontal: 10),
                       child: SingleChildScrollView(
                         scrollDirection: Axis.horizontal,
                         child: Text(
                           'PDF - URL - Image - word - document',
-                          style: Theme.of(context).textTheme.headline2,
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 15,
+                              color: Colors.black),
                           textAlign: TextAlign.center,
                         ),
                       ),
@@ -80,7 +86,8 @@ class Course extends StatelessWidget {
                   ),
                   Text(
                     ' إضافة  ',
-                    style: Theme.of(context).textTheme.headline1,
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   ),
                 ],
               ),
@@ -88,23 +95,61 @@ class Course extends StatelessWidget {
             SizedBox(
               height: 40,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'حفظ',
-                      style: Theme.of(context).textTheme.headline1,
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'معاينة',
-                      style: Theme.of(context).textTheme.headline1,
-                    )),
-              ],
-            )
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.red),
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 60, vertical: 5))),
+                      onPressed: () {},
+                      child: Text(
+                        'حذف',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.black),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 60, vertical: 5))),
+                      onPressed: () {},
+                      child: Text(
+                        'حفظ',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.black),
+                      )),
+                ),
+              ]),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(horizontal: 60, vertical: 5))),
+                  onPressed: () {},
+                  child: Text(
+                    'معاينة',
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                  )),
+            ),
           ],
         ),
       ),

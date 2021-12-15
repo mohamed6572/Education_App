@@ -36,7 +36,13 @@ class parent extends StatelessWidget {
                       onTap: () {
                         Navigator.pushNamed(context, accountset.routeName);
                       },
-                      child: Text('مرحبا بك   \n يا ولي الامر')),
+                      child: Text(
+                        'مرحبا بك   \n يا ولي الامر',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 13,
+                            color: Colors.white),
+                      )),
                 ],
               ),
             )
@@ -70,10 +76,8 @@ class parent extends StatelessWidget {
                   padding: const EdgeInsets.all(6.0),
                   child: Text(
                     'اسم الطالب',
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(fontSize: 26),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 26, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                 ),
@@ -88,10 +92,10 @@ class parent extends StatelessWidget {
                     children: [
                       Text(
                         'الغياب والحضور',
-                        style: Theme.of(context).textTheme.headline2!.copyWith(
-                              fontSize: 25,
-                              fontWeight: FontWeight.w500,
-                            ),
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 25,
+                            color: Colors.black),
                         textAlign: TextAlign.end,
                       ),
                       Divider(
@@ -137,7 +141,10 @@ class parent extends StatelessWidget {
                               padding: const EdgeInsets.only(right: 4.0),
                               child: Text(
                                 'محمد هشام',
-                                style: Theme.of(context).textTheme.headline2,
+                                style: TextStyle(
+                                    fontFamily: "Cairo",
+                                    fontSize: 15,
+                                    color: Colors.black),
                               ),
                             ),
                           ],
@@ -158,20 +165,18 @@ class parent extends StatelessWidget {
                   Text(
                     ' جيد جدا (85%) ',
                     textAlign: TextAlign.end,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(fontSize: 25, color: Colors.green),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 25, color: Colors.green),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       ': نتائج الاختبارات ',
                       textAlign: TextAlign.end,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline1!
-                          .copyWith(fontSize: 25),
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 25,
+                          color: Colors.black),
                     ),
                   ),
                 ],
@@ -215,20 +220,18 @@ class parent extends StatelessWidget {
                   Text(
                     ' شهر ومذكره ',
                     textAlign: TextAlign.end,
-                    style: Theme.of(context)
-                        .textTheme
-                        .headline1!
-                        .copyWith(fontSize: 25, color: Colors.green),
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 25, color: Colors.green),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
                     child: Text(
                       ': المدفوعات ',
                       textAlign: TextAlign.end,
-                      style: Theme.of(context)
-                          .textTheme
-                          .headline1!
-                          .copyWith(fontSize: 25),
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 25,
+                          color: Colors.black),
                     ),
                   ),
                 ],
