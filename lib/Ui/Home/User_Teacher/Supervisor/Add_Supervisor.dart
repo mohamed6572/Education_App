@@ -45,19 +45,24 @@ class Add_Supervisor extends StatelessWidget {
             SizedBox(
               height: MediaQuery.of(context).size.height * 0.02,
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Course_Wiget('                 المرحلة '),
-                  Course_Wiget('                    الصف   '),
-                  Course_Wiget('           المجموعه'),
-                  Course_Wiget('       اسم المشرف  '),
-                  Course_Wiget('   اسم المجموعة'),
-                  Course_Wiget('          اسم المادة'),
-                ],
-              ),
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: [
+                      Course_Wiget('                 المرحلة '),
+                      Course_Wiget('                    الصف   '),
+                      Course_Wiget('           المجموعه'),
+                      Course_Wiget('       اسم المشرف  '),
+                      Course_Wiget('   اسم المجموعة'),
+                      Course_Wiget('          اسم المادة'),
+                    ],
+                  ),
+                ),
+              ],
             ),
             SizedBox(
               height: 20,

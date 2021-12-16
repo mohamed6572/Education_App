@@ -48,44 +48,67 @@ class Stream_Teacher extends StatelessWidget {
             Course_Wiget('       المرحلة '),
             Course_Wiget('  اسم الصف  '),
             Course_Wiget('  المجموعة '),
-            Course_Wiget('    اسم درس  '),
+            Course_Wiget('  اسم الدرس  '),
             Course_Wiget('    موعد البث  '),
             Course_Wiget('إضافة لينك '),
             SizedBox(
               height: 40,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'معاينة',
-                      style: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'حذف',
-                      style: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                    )),
-                ElevatedButton(
-                    onPressed: () {},
-                    child: Text(
-                      'حفظ',
-                      style: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                    )),
-              ],
-            )
+            SingleChildScrollView(
+              scrollDirection: Axis.horizontal,
+              child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          backgroundColor:
+                              MaterialStateProperty.all(Colors.red),
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 60, vertical: 5))),
+                      onPressed: () {},
+                      child: Text(
+                        'حذف',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.black),
+                      )),
+                ),
+                Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                  child: ElevatedButton(
+                      style: ButtonStyle(
+                          padding: MaterialStateProperty.all(
+                              EdgeInsets.symmetric(
+                                  horizontal: 60, vertical: 5))),
+                      onPressed: () {},
+                      child: Text(
+                        'حفظ',
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.black),
+                      )),
+                ),
+              ]),
+            ),
+            SizedBox(
+              height: 10,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: ElevatedButton(
+                  style: ButtonStyle(
+                      padding: MaterialStateProperty.all(
+                          EdgeInsets.symmetric(horizontal: 60, vertical: 5))),
+                  onPressed: () {},
+                  child: Text(
+                    'معاينة',
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                  )),
+            ),
           ],
         ),
       ),

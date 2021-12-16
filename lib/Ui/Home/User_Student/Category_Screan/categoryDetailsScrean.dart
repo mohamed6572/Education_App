@@ -8,7 +8,7 @@ class CategoryDetailsScrean extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SingleChildScrollView(
       child: Center(
         child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
           Column(
@@ -46,7 +46,9 @@ class CategoryDetailsScrean extends StatelessWidget {
                   fontFamily: "Cairo", fontSize: 18, color: Colors.black),
             ),
           ),
-          Spacer(),
+          SizedBox(
+            height: 50,
+          ),
           Center(
             child: Container(
               width: 300,
@@ -82,7 +84,9 @@ class CategoryDetailsScrean extends StatelessWidget {
                   backgroundColor: MaterialStateProperty.all(Colors.blue)),
             ),
           ),
-          Spacer(),
+          SizedBox(
+            height: 130,
+          ),
           Row(
             mainAxisAlignment: MainAxisAlignment.end,
             children: [

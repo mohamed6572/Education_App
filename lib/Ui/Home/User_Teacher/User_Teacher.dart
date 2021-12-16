@@ -1,5 +1,6 @@
 import 'package:education_app/MyThemeData.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Add_Exam/Add_Exam.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Add_stud/conection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Collection/Collection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Course/Course.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Statistics/Statistics.dart';
@@ -190,7 +191,7 @@ class User_Teacher extends StatelessWidget {
                   ),
                   InkWell(
                     onTap: () {
-                      Navigator.pushNamed(context, Add_stud.routeName);
+                      Navigator.pushNamed(context, conection.routeName);
                     },
                     child: teacher_Widget(
                         text: 'التواصل\n مع الطلاب', color: Colors.teal),

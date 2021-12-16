@@ -1,10 +1,12 @@
 import 'package:education_app/MyThemeData.dart';
 import 'package:education_app/Ui/Exam/Exam_Screan.dart';
+import 'package:education_app/Ui/For_All/Contact.dart';
 import 'package:education_app/Ui/For_All/For_All.dart';
 import 'package:education_app/Ui/For_All/test.dart';
 import 'package:education_app/Ui/Home/StartScrean.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Add_Exam/Add_Exam.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Add_stud/Add_stud.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Add_stud/conection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Collection/Collection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Course/Course.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Statistics/Statistics.dart';
@@ -83,6 +85,8 @@ class MyApp extends StatelessWidget {
         test.routeName: (context) => test(),
         Add_stud.routeName: (context) => Add_stud(),
         Add.routeName: (context) => Add(),
+        Contact.routeName: (context) => Contact(),
+        conection.routeName: (context) => conection(),
       },
       initialRoute: Start_Screan.routeName,
     );

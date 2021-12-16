@@ -31,6 +31,7 @@ class Notification_Screan extends StatelessWidget {
                       children: [
                         Text(
                           'البث المباشر \n  شرح اسم الفاعل ',
+                          textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.headline1,
                         ),
                         SizedBox(
@@ -93,6 +94,7 @@ class Notification_Screan extends StatelessWidget {
                         Text(
                           'مادة الكيمياء \n  تم اضافة درس جديد ',
                           style: Theme.of(context).textTheme.headline1,
+                          textAlign: TextAlign.center,
                         ),
                         SizedBox(
                           width: 8,
@@ -153,6 +155,7 @@ class Notification_Screan extends StatelessWidget {
                       children: [
                         Text(
                           'مادة العربي \n  تم اضافة امتحان ',
+                          textAlign: TextAlign.center,
                           style: Theme.of(context).textTheme.headline1,
                         ),
                         SizedBox(

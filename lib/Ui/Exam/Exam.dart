@@ -37,8 +37,8 @@ class Exam extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              crossAxisAlignment: CrossAxisAlignment.end,
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Column(
                   children: [
@@ -58,10 +58,20 @@ class Exam extends StatelessWidget {
                 SizedBox(
                   width: 20,
                 ),
-                Text(
-                  ' عدد الاسئلة  \n     ١٠  اسئلة ',
-                  style: TextStyle(
-                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                Column(
+                  children: [
+                    Icon(
+                      Icons.question_answer,
+                      size: 40,
+                    ),
+                    Text(
+                      ' عدد الاسئلة  \n     ١٠  اسئلة ',
+                      style: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black),
+                    ),
+                  ],
                 ),
               ],
             ),
@@ -69,30 +79,49 @@ class Exam extends StatelessWidget {
           SizedBox(
             height: 20,
           ),
-          Text(
-            '. ١- اقرأ الاسئلة جيدا ولاتتسرع في الاجابة ',
-            style: TextStyle(
-                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              '. ٢- يمكنك تخطي اي سؤال والعودة له مرة اخرى ',
-              style: TextStyle(
-                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
-            ),
-          ),
-          Text(
-            ' . ٣- انتبه الى الوقت وحاول ان تنتهي قبل نهاية الوقت ',
-            style: TextStyle(
-                fontFamily: "Cairo", fontSize: 15, color: Colors.black),
-          ),
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Text(
-              '. ٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة ',
-              style: TextStyle(
-                  fontFamily: "Cairo", fontSize: 15, color: Colors.black),
+          Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.end,
+              children: [
+                Padding(
+                  padding: EdgeInsets.all(8),
+                  child: Text(
+                    '. ١- اقرأ الاسئلة جيدا ولاتتسرع في الاجابة ',
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 15, color: Colors.black),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '. ٢- يمكنك تخطي اي سؤال والعودة له مرة اخرى ',
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 15, color: Colors.black),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    ' . ٣- انتبه الى الوقت وحاول ان تنتهي قبل نهاية الوقت ',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                        fontFamily: "Cairo", fontSize: 15, color: Colors.black),
+                  ),
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Text(
+                    '. ٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة ',
+                    textAlign: TextAlign.end,
+                    style: TextStyle(
+                      fontFamily: "Cairo",
+                      fontSize: 15,
+                      color: Colors.black,
+                    ),
+                  ),
+                ),
+              ],
             ),
           ),
           SizedBox(

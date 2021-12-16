@@ -56,7 +56,7 @@ class _Login_Screan_teacherState extends State<Login_Screan_for_teacher> {
                       Expanded(
                         flex: 1,
                         child: CountryCodePicker(
-                          showFlagMain: false,
+                          showFlagMain: true,
                           initialSelection: 'EG',
                           showCountryOnly: true,
                           alignLeft: true,
@@ -64,15 +64,14 @@ class _Login_Screan_teacherState extends State<Login_Screan_for_teacher> {
                         ),
                       ),
                       Expanded(
-                        flex: 4,
+                        flex: 2,
                         child: TextFormField(
                           decoration: InputDecoration(
-                              labelText: '0.000000',
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                ),
-                              )),
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                            ),
+                          )),
                         ),
                       )
                     ]),

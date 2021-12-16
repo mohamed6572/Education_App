@@ -56,7 +56,7 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                       Expanded(
                         flex: 1,
                         child: CountryCodePicker(
-                          showFlagMain: false,
+                          showFlagMain: true,
                           initialSelection: 'EG',
                           showCountryOnly: true,
                           alignLeft: true,
@@ -64,15 +64,14 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                         ),
                       ),
                       Expanded(
-                        flex: 4,
+                        flex: 2,
                         child: TextFormField(
                           decoration: InputDecoration(
-                              labelText: '0.000000',
                               enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                  color: Colors.transparent,
-                                ),
-                              )),
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                            ),
+                          )),
                         ),
                       )
                     ]),
@@ -93,8 +92,9 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                         return null;
                       },
                       decoration: InputDecoration(
-                        labelText: ' Password',
+                        hintText: ' Password',
                         enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(20),
                           borderSide: BorderSide(
                             color: Colors.transparent,
                           ),
@@ -120,7 +120,13 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                       children: [
                         Row(
                           children: [
-                            Text('تذكرني لاحقا'),
+                            Text(
+                              'تذكرني لاحقا',
+                              style: TextStyle(
+                                  fontFamily: "Cairo",
+                                  fontSize: 15,
+                                  color: Colors.black),
+                            ),
                             Checkbox(
                                 value: _checked,
                                 onChanged: (bool? value) {
@@ -134,7 +140,10 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                             onPressed: () {},
                             child: Text(
                               'هل نسيت الرقم السري؟',
-                              style: TextStyle(color: Colors.blue),
+                              style: TextStyle(
+                                  fontFamily: "Cairo",
+                                  fontSize: 15,
+                                  color: Colors.blue),
                             )),
                       ],
                     ),
@@ -150,7 +159,13 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                         },
                         child: Padding(
                           padding: const EdgeInsets.all(12.0),
-                          child: Text('تسجيل الدخول'),
+                          child: Text(
+                            'تسجيل الدخول',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 15,
+                                color: Colors.white),
+                          ),
                         )),
                     width: 200,
                   ),
@@ -164,7 +179,10 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                       },
                       child: Text(
                         'تسجيل حساب جديد',
-                        style: TextStyle(color: Colors.blue, fontSize: 18),
+                        style: TextStyle(
+                            fontFamily: "Cairo",
+                            fontSize: 18,
+                            color: Colors.blue),
                       )),
                 ],
               ),

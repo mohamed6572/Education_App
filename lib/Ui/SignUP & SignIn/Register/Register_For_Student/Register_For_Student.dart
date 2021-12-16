@@ -33,27 +33,28 @@ class Register_For_Student extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                studentWidget('الاسم '),
+                studentWidget('الاسم'),
                 studentWidget(' المرحلة'),
                 studentWidget('الصف '),
-                studentWidget('  رقم هاتف \n ولي الامر '),
-                studentWidget('    رقم \n الهاتف '),
-                studentWidget('    رساله \n تأكيد '),
-                studentWidget('الباسورد '),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width * 0.25, top: 8),
-                  width: 250,
-                  height: 40,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, Login_Screan.routeName);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Text(
-                        'ابدأ',
-                        style: Theme.of(context).textTheme.headline1,
+                studentWidget('رقم هاتف  ولي الامر'),
+                studentWidget('رقم الهاتف'),
+                studentWidget('رساله التأكيد'),
+                studentWidget('الباسورد'),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 8),
+                    width: 250,
+                    height: 40,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Login_Screan.routeName);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Text(
+                          'ابدأ',
+                          style: Theme.of(context).textTheme.headline1,
+                        ),
                       ),
                     ),
                   ),

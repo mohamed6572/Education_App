@@ -1,9 +1,9 @@
 import 'package:education_app/MyThemeData.dart';
-import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Student/studentWidget.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Course/widget_Course.dart';
 import 'package:flutter/material.dart';
 
-class Add_stud extends StatelessWidget {
-  static const String routeName = 'Add_stud';
+class conection extends StatelessWidget {
+  static const String routeName = 'conection';
 
   @override
   Widget build(BuildContext context) {
@@ -43,13 +43,31 @@ class Add_stud extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                studentWidget('الاسم '),
-                studentWidget(' المرحلة'),
-                studentWidget('الصف '),
-                studentWidget('  رقم هاتف ولي الامر '),
-                studentWidget(' رقم الهاتف '),
-                studentWidget('    رساله التأكيد '),
-                studentWidget('الباسورد '),
+                Course_Wiget('         المرحلة '),
+                Course_Wiget('           الصف   '),
+                Course_Wiget('   المجموعه'),
+                Course_Wiget('    اسم الطالب'),
+                Container(
+                  margin: EdgeInsets.all(10),
+                  padding: EdgeInsets.all(15),
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  decoration: BoxDecoration(
+                      boxShadow: [
+                        BoxShadow(
+                            color: Colors.blue,
+                            offset: Offset(0, 2),
+                            spreadRadius: 0,
+                            blurRadius: 8),
+                      ],
+                      borderRadius: BorderRadius.circular(25),
+                      color: Colors.white),
+                  child: Text(
+                    '..........نص الرسالة',
+                    style: Theme.of(context).textTheme.headline1,
+                    textAlign: TextAlign.end,
+                  ),
+                ),
                 SizedBox(
                   height: 30,
                 ),
@@ -61,7 +79,7 @@ class Add_stud extends StatelessWidget {
               child: ElevatedButton(
                   onPressed: () {},
                   child: Text(
-                    'اضف',
+                    'إرسال',
                     style: Theme.of(context)
                         .textTheme
                         .headline1!

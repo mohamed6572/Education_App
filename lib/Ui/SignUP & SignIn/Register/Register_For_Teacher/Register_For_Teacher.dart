@@ -34,29 +34,30 @@ class Register_For_Teacher extends StatelessWidget {
                 SizedBox(
                   height: 10,
                 ),
-                WidgetRegs('الاسم '),
-                WidgetRegs('    اسم \n المادة '),
-                WidgetRegs('    نبذة \n مختصرة '),
-                WidgetRegs('    رقم \n الهاتف '),
-                WidgetRegs('    رساله \n تأكيد '),
-                WidgetRegs('الباسورد '),
-                Container(
-                  margin: EdgeInsets.only(
-                      right: MediaQuery.of(context).size.width * 0.25, top: 8),
-                  width: 250,
-                  height: 50,
-                  child: ElevatedButton(
-                    onPressed: () {
-                      Navigator.pushNamed(context, Login_Screan.routeName);
-                    },
-                    child: Padding(
-                      padding: const EdgeInsets.all(5.0),
-                      child: Text(
-                        'ابدأ',
-                        style: TextStyle(
-                            fontFamily: "Cairo",
-                            fontSize: 15,
-                            color: Colors.black),
+                WidgetRegs('الاسم'),
+                WidgetRegs('اسم  المادة'),
+                WidgetRegs('نبذة مختصرة'),
+                WidgetRegs('رقم  الهاتف'),
+                WidgetRegs('رساله  التأكيد'),
+                WidgetRegs('الباسورد'),
+                Center(
+                  child: Container(
+                    margin: EdgeInsets.only(top: 8),
+                    width: 250,
+                    height: 50,
+                    child: ElevatedButton(
+                      onPressed: () {
+                        Navigator.pushNamed(context, Login_Screan.routeName);
+                      },
+                      child: Padding(
+                        padding: const EdgeInsets.all(5.0),
+                        child: Text(
+                          'ابدأ',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 15,
+                              color: Colors.black),
+                        ),
                       ),
                     ),
                   ),

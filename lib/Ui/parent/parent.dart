@@ -73,9 +73,9 @@ class parent extends StatelessWidget {
                   ],
                 ),
                 child: Padding(
-                  padding: const EdgeInsets.all(6.0),
+                  padding: const EdgeInsets.all(2.0),
                   child: Text(
-                    'اسم الطالب',
+                    'الطالب : محمد هشام',
                     style: TextStyle(
                         fontFamily: "Cairo", fontSize: 26, color: Colors.black),
                     textAlign: TextAlign.center,
@@ -218,7 +218,7 @@ class parent extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(
-                    ' شهر ومذكره ',
+                    ' الشهر والمذكره ',
                     textAlign: TextAlign.end,
                     style: TextStyle(
                         fontFamily: "Cairo", fontSize: 25, color: Colors.green),

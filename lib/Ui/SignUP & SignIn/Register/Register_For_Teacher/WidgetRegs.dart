@@ -12,9 +12,11 @@ class WidgetRegs extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            flex: 4,
             child: TextFormField(
               decoration: InputDecoration(
+                  hintText: text,
+                  hintStyle: TextStyle(
+                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                   enabledBorder: OutlineInputBorder(
                       borderRadius: BorderRadius.circular(20),
                       borderSide: BorderSide(width: 2, color: Colors.blue))),
@@ -23,18 +25,6 @@ class WidgetRegs extends StatelessWidget {
           SizedBox(
             width: 5,
           ),
-          Text(
-            '-:',
-            style: TextStyle(
-                fontFamily: "Cairo", fontSize: 18, color: Colors.black),
-          ),
-          Expanded(
-              flex: 1,
-              child: Text(
-                text,
-                style: TextStyle(
-                    fontFamily: "Cairo", fontSize: 18, color: Colors.black),
-              )),
         ],
       ),
     );

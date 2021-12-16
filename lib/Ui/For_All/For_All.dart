@@ -1,3 +1,4 @@
+import 'package:education_app/Ui/For_All/Contact.dart';
 import 'package:education_app/Ui/For_All/For_All_Widget.dart';
 import 'package:education_app/Ui/For_All/For_All_Widget2.dart';
 import 'package:education_app/Ui/For_All/For_All_Widget3.dart';
@@ -51,58 +52,73 @@ class For_All extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    SizedBox(
-                      height: 35,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 1,
+              Center(
+                child: SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child: Row(
+                    children: [
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(context, Contact.routeName);
+                        },
+                        child: Text(
+                          'للتواصل معنا',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 20,
+                              color: Colors.black),
+                        ),
+                      ),
+                      SizedBox(
+                        height: 35,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 1,
+                          width: 10,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 5,
+                      ),
+                      InkWell(
+                        onTap: () {
+                          Navigator.pushNamed(
+                              context, Chose_Register.routeName);
+                        },
+                        child: Text(
+                          'حسابي',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 20,
+                              color: Colors.black),
+                        ),
+                      ),
+                      SizedBox(
                         width: 10,
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    InkWell(
-                      onTap: () {
-                        Navigator.pushNamed(context, Chose_Register.routeName);
-                      },
-                      child: Text(
-                        'حسابي',
-                        style: TextStyle(
-                            fontFamily: "Cairo",
-                            fontSize: 20,
-                            color: Colors.black),
+                      SizedBox(
+                        height: 35,
+                        child: VerticalDivider(
+                          color: Colors.black,
+                          thickness: 1,
+                          width: 10,
+                        ),
                       ),
-                    ),
-                    SizedBox(
-                      width: 10,
-                    ),
-                    SizedBox(
-                      height: 35,
-                      child: VerticalDivider(
-                        color: Colors.black,
-                        thickness: 1,
-                        width: 10,
+                      SizedBox(
+                        width: 5,
                       ),
-                    ),
-                    SizedBox(
-                      width: 5,
-                    ),
-                    InkWell(
-                      onTap: () {},
-                      child: Text(
-                        'كورسات مدفوعه',
-                        style: TextStyle(
-                            fontFamily: "Cairo",
-                            fontSize: 20,
-                            color: Colors.black),
+                      InkWell(
+                        onTap: () {},
+                        child: Text(
+                          'كورسات مدفوعه',
+                          style: TextStyle(
+                              fontFamily: "Cairo",
+                              fontSize: 20,
+                              color: Colors.black),
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               SizedBox(
@@ -205,7 +221,7 @@ class For_All extends StatelessWidget {
                     For_All_Widget('التاريخ'),
                     For_All_Widget('الاحياء'),
                     For_All_Widget('الكيمياء'),
-                    For_All_Widget('فيزيا'),
+                    For_All_Widget('فيزياء'),
                     For_All_Widget('عربي'),
                     For_All_Widget('رياضيات'),
                     For_All_Widget('فرنساوي'),
@@ -262,7 +278,7 @@ class For_All extends StatelessWidget {
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
+                        "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
@@ -271,17 +287,17 @@ class For_All extends StatelessWidget {
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            " مستر اسماعيل حسانين  \n   مدرس لغة انجليزية    ",
+                        " مستر اسماعيل حسانين  \n   مدرس لغة انجليزية    ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            "    مستر عمرو الشرقاوي  \n         مدرس فيزياء       ",
+                        "    مستر عمرو الشرقاوي  \n         مدرس فيزياء       ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                            "    مستر علي حجازي  \n         مدرس فيزياء       ",
+                        "    مستر علي حجازي  \n         مدرس فيزياء       ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
