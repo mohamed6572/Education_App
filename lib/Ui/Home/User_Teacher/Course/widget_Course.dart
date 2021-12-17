@@ -15,6 +15,7 @@ class Course_Wiget extends StatelessWidget {
           Container(
             width: 200,
             height: 50,
+            padding: EdgeInsets.only(right: 8, left: 8),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(18),
                 boxShadow: [
@@ -25,6 +26,16 @@ class Course_Wiget extends StatelessWidget {
                       blurRadius: 6),
                 ],
                 color: Colors.white),
+            child: TextFormField(
+              decoration: InputDecoration(
+                  counterStyle: TextStyle(color: Colors.transparent),
+                  enabledBorder: OutlineInputBorder(
+                    borderRadius: BorderRadius.circular(18),
+                    borderSide: BorderSide(
+                      color: Colors.transparent,
+                    ),
+                  )),
+            ),
           ),
           SizedBox(
             width: 15,

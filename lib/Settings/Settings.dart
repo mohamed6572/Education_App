@@ -86,10 +86,14 @@ class _SettingsState extends State<Settings> {
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text(provider.appTheme == ThemeMode.light
-                      ? "المضئ"
-                      : "المظلم"),
-                  Icon(Icons.arrow_drop_down_sharp)
+                  Text(
+                    provider.appTheme == ThemeMode.light ? "المضئ" : "المظلم",
+                    style: TextStyle(color: Theme.of(context).primaryColor),
+                  ),
+                  Icon(
+                    Icons.arrow_drop_down_sharp,
+                    color: Theme.of(context).primaryColor,
+                  )
                 ],
               ),
             ),

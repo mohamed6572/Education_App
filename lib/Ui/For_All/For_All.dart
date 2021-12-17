@@ -1,3 +1,4 @@
+import 'package:carousel_slider/carousel_slider.dart';
 import 'package:education_app/Ui/For_All/Contact.dart';
 import 'package:education_app/Ui/For_All/For_All_Widget.dart';
 import 'package:education_app/Ui/For_All/For_All_Widget2.dart';
@@ -8,6 +9,80 @@ import 'package:flutter/material.dart';
 
 class For_All extends StatelessWidget {
   static const String routeName = 'For_All';
+
+  List<Widget> liest2 = [
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر شبل  \nمدرس  احياء ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: " مستر اسماعيل حسانين  \n   مدرس لغة انجليزية    ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "    مستر عمرو الشرقاوي  \n         مدرس فيزياء       ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "    مستر علي حجازي  \n         مدرس فيزياء       ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر ايمن الشحات  \n       مدرس تاريخ   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر اسلام صبح  \n  مدرس لغة فرنسيه   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر احمد الشيخ  \n     مدرس الكيمياء   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر احمد راشد  \n     مدرس الكيمياء   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر احمد علي  \n    مدرس جغرافيا   ",
+        imagePath: 'assets/images/teacher.jpg'),
+    For_All_Widget2(
+        text: 'عرض التفاصيل',
+        text2: "   مستر محمد ذكري  \n    مدرس علم نفس   ",
+        imagePath: 'assets/images/teacher.jpg'),
+  ];
+  List<Image> list = [
+    Image.asset(
+      'assets/images/add6.png',
+      height: 250,
+      width: 400,
+    ),
+    Image.asset(
+      'assets/images/add2.png',
+      height: 250,
+      width: 400,
+    ),
+    Image.asset(
+      'assets/images/add4.png',
+      height: 250,
+      width: 400,
+    ),
+    Image.asset(
+      'assets/images/add3.png',
+      width: 400,
+      height: 250,
+    ),
+    Image.asset(
+      'assets/images/add.png',
+      height: 250,
+      width: 400,
+    ),
+  ];
 
   @override
   Widget build(BuildContext context) {
@@ -23,24 +98,26 @@ class For_All extends StatelessWidget {
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(18), color: Colors.white),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                // mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Icon(
                     Icons.search,
                     size: 20,
                     color: Colors.black,
                   ),
-                  Text(
-                    '.........بحث',
-                    style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 20, color: Colors.black),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.23,
                   ),
+                  Text(
+                    'بحث',
+                    style: Theme.of(context).textTheme.headline1,
+                  )
                 ],
               ),
             ),
           ),
           SizedBox(
-            width: 10,
+            width: MediaQuery.of(context).size.width * 0.18,
           ),
         ],
       ),
@@ -62,7 +139,7 @@ class For_All extends StatelessWidget {
                           Navigator.pushNamed(context, Contact.routeName);
                         },
                         child: Text(
-                          'للتواصل معنا',
+                          'للتواصل معنا  ',
                           style: TextStyle(
                               fontFamily: "Cairo",
                               fontSize: 20,
@@ -86,7 +163,7 @@ class For_All extends StatelessWidget {
                               context, Chose_Register.routeName);
                         },
                         child: Text(
-                          'حسابي',
+                          'حسابي  ',
                           style: TextStyle(
                               fontFamily: "Cairo",
                               fontSize: 20,
@@ -128,52 +205,23 @@ class For_All extends StatelessWidget {
                 color: Colors.black,
                 thickness: 1,
               ),
-              SingleChildScrollView(
-                scrollDirection: Axis.horizontal,
-                child: Row(
-                  children: [
-                    Image.asset(
-                      'assets/images/add6.png',
-                      height: 150,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset(
-                      'assets/images/add2.png',
-                      height: 150,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset(
-                      'assets/images/add4.png',
-                      height: 150,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset(
-                      'assets/images/add5.png',
-                      height: 150,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset(
-                      'assets/images/add3.png',
-                      height: 150,
-                    ),
-                    SizedBox(
-                      width: 8,
-                    ),
-                    Image.asset(
-                      'assets/images/add.png',
-                      height: 150,
-                    ),
-                  ],
+              CarouselSlider(
+                items: list,
+                options: CarouselOptions(
+                  aspectRatio: 6 / 2,
+                  height: MediaQuery.of(context).size.height * 0.20,
+                  initialPage: 0,
+                  viewportFraction: 1.0,
+                  enableInfiniteScroll: true,
+                  autoPlay: true,
+                  reverse: false,
+                  autoPlayInterval: Duration(seconds: 8),
+                  autoPlayAnimationDuration: Duration(milliseconds: 400),
+                  autoPlayCurve: Curves.fastOutSlowIn,
+                  scrollDirection: Axis.horizontal,
                 ),
               ),
+
               SizedBox(
                 height: 5,
               ),
@@ -212,6 +260,7 @@ class For_All extends StatelessWidget {
                   ],
                 ),
               ),
+
               SingleChildScrollView(
                 scrollDirection: Axis.horizontal,
                 child: Row(
@@ -270,6 +319,23 @@ class For_All extends StatelessWidget {
               SizedBox(
                 height: 10,
               ),
+              // CarouselSlider(
+              //
+              //   items: liest2,
+              //   options: CarouselOptions(
+              //     height: MediaQuery.of(context).size.height * 0.30,
+              //     initialPage: 0,
+              //     viewportFraction: 1.0,
+              //     enableInfiniteScroll: true,
+              //     autoPlay: true,
+              //     reverse: false,
+              //
+              //     autoPlayInterval: Duration(seconds: 8),
+              //     autoPlayAnimationDuration: Duration(milliseconds: 400),
+              //     autoPlayCurve: Curves.fastOutSlowIn,
+              //     scrollDirection: Axis.horizontal,
+              //   ),
+              // ),
               SingleChildScrollView(
                 padding: EdgeInsets.all(2),
                 scrollDirection: Axis.horizontal,
@@ -278,7 +344,7 @@ class For_All extends StatelessWidget {
                     For_All_Widget2(
                         text: 'عرض التفاصيل',
                         text2:
-                        "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
+                            "    مستر عبدالرحمن الحماقي  \n             مدرس لغة عربية   ",
                         imagePath: 'assets/images/teacher.jpg'),
                     For_All_Widget2(
                         text: 'عرض التفاصيل',

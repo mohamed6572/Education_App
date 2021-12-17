@@ -48,7 +48,7 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                     height: 10,
                   ),
                   Container(
-                    margin: EdgeInsets.all(5),
+                    margin: EdgeInsets.all(2),
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.blue, width: 2)),
@@ -65,13 +65,17 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                       ),
                       Expanded(
                         flex: 2,
-                        child: TextFormField(
-                          decoration: InputDecoration(
-                              enabledBorder: OutlineInputBorder(
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                            ),
-                          )),
+                        child: Padding(
+                          padding: const EdgeInsets.only(right: 8.0),
+                          child: TextFormField(
+                            decoration: InputDecoration(
+                                enabledBorder: OutlineInputBorder(
+                              borderRadius: BorderRadius.circular(30),
+                              borderSide: BorderSide(
+                                color: Colors.transparent,
+                              ),
+                            )),
+                          ),
                         ),
                       )
                     ]),
@@ -81,33 +85,36 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
                     decoration: BoxDecoration(
                         borderRadius: BorderRadius.circular(20),
                         border: Border.all(color: Colors.blue, width: 2)),
-                    child: TextFormField(
-                      validator: (text) {
-                        if (text == null || text.trim().isEmpty) {
-                          return 'Please Enter Password';
-                        }
-                        if (text.length < 6) {
-                          return 'password should be at least 6 chars';
-                        }
-                        return null;
-                      },
-                      decoration: InputDecoration(
-                        hintText: ' Password',
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
+                    child: Padding(
+                      padding: const EdgeInsets.only(left: 10, right: 10.0),
+                      child: TextFormField(
+                        validator: (text) {
+                          if (text == null || text.trim().isEmpty) {
+                            return 'Please Enter Password';
+                          }
+                          if (text.length < 6) {
+                            return 'password should be at least 6 chars';
+                          }
+                          return null;
+                        },
+                        decoration: InputDecoration(
+                          hintText: ' Password',
+                          enabledBorder: OutlineInputBorder(
+                            borderRadius: BorderRadius.circular(20),
+                            borderSide: BorderSide(
+                              color: Colors.transparent,
+                            ),
+                          ),
+                          suffixIcon: IconButton(
+                            icon: isvisable
+                                ? Icon(Icons.visibility_off)
+                                : Icon(Icons.visibility),
+                            onPressed: () =>
+                                setState(() => isvisable = !isvisable),
                           ),
                         ),
-                        suffixIcon: IconButton(
-                          icon: isvisable
-                              ? Icon(Icons.visibility_off)
-                              : Icon(Icons.visibility),
-                          onPressed: () =>
-                              setState(() => isvisable = !isvisable),
-                        ),
+                        obscureText: isvisable,
                       ),
-                      obscureText: isvisable,
                     ),
                   ),
                   SizedBox(

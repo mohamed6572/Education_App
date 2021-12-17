@@ -14,15 +14,20 @@ class test extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
-                '  برجاء التسجيل    \nلمشاهدة التفاصيل',
+                '     برجاء التسجيل    \nلمشاهدة التفاصيل',
                 style: TextStyle(
+                  fontFamily: "Cairo",
                   fontSize: 30,
                 ),
               ),
               InkWell(
                 child: Text(
                   'سجل الان',
-                  style: TextStyle(color: Colors.blue, fontSize: 19),
+                  style: TextStyle(
+                    color: Colors.blue,
+                    fontSize: 19,
+                    fontFamily: "Cairo",
+                  ),
                 ),
               )
             ],

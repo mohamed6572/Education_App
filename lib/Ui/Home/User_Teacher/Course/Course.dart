@@ -37,84 +37,122 @@ class Course extends StatelessWidget {
       ),
       body: SingleChildScrollView(
         child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
           children: [
             SizedBox(
-              height: MediaQuery.of(context).size.height * 0.02,
+              height: 20,
             ),
-            Course_Wiget('      المرحلة '),
-            Course_Wiget('         الصف   '),
-            Course_Wiget(' المجموعه'),
-            Course_Wiget('اسم الوحدة'),
-            Course_Wiget(' اسم الدرس '),
-            Padding(
-              padding: const EdgeInsets.all(8.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Container(
-                    width: 200,
-                    height: 50,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(18),
-                        boxShadow: [
-                          BoxShadow(
-                              color: Colors.blue,
-                              offset: Offset(0, 2),
-                              spreadRadius: 0,
-                              blurRadius: 6),
-                        ],
-                        color: Colors.white),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                          vertical: 12.0, horizontal: 10),
-                      child: SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Text(
-                          'PDF - URL - Image - word - document',
-                          style: TextStyle(
-                              fontFamily: "Cairo",
-                              fontSize: 15,
-                              color: Colors.black),
-                          textAlign: TextAlign.center,
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    width: 50,
-                  ),
-                  Text(
-                    ' إضافة  ',
-                    style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
-                  ),
-                ],
+            ClipRRect(
+              borderRadius: BorderRadius.circular(80),
+              child: Container(
+                width: 150,
+                height: 150,
+                color: Colors.blue,
+                child: Icon(Icons.add),
               ),
             ),
-            SizedBox(
-              height: 40,
-            ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              child: Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+            Column(
+              crossAxisAlignment: CrossAxisAlignment.stretch,
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.02,
+                ),
+                Course_Wiget('      المرحلة '),
+                Course_Wiget('         الصف   '),
+                Course_Wiget(' المجموعه'),
+                Course_Wiget('اسم الوحدة'),
+                Course_Wiget(' اسم الدرس '),
                 Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                  child: ElevatedButton(
-                      style: ButtonStyle(
-                          backgroundColor:
-                              MaterialStateProperty.all(Colors.red),
-                          padding: MaterialStateProperty.all(
-                              EdgeInsets.symmetric(
-                                  horizontal: 60, vertical: 5))),
-                      onPressed: () {},
-                      child: Text(
-                        'حذف',
+                  padding: const EdgeInsets.all(8.0),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      Container(
+                        width: 200,
+                        height: 50,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
+                            boxShadow: [
+                              BoxShadow(
+                                  color: Colors.blue,
+                                  offset: Offset(0, 2),
+                                  spreadRadius: 0,
+                                  blurRadius: 6),
+                            ],
+                            color: Colors.white),
+                        child: Padding(
+                          padding: const EdgeInsets.symmetric(
+                              vertical: 12.0, horizontal: 10),
+                          child: SingleChildScrollView(
+                            scrollDirection: Axis.horizontal,
+                            child: Text(
+                              'PDF - URL - Image - word - document',
+                              style: TextStyle(
+                                  fontFamily: "Cairo",
+                                  fontSize: 15,
+                                  color: Colors.black),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(
+                        width: 50,
+                      ),
+                      Text(
+                        ' إضافة  ',
                         style: TextStyle(
                             fontFamily: "Cairo",
                             fontSize: 18,
                             color: Colors.black),
-                      )),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 40,
+                ),
+                SingleChildScrollView(
+                  scrollDirection: Axis.horizontal,
+                  child:
+                      Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              backgroundColor:
+                                  MaterialStateProperty.all(Colors.red),
+                              padding: MaterialStateProperty.all(
+                                  EdgeInsets.symmetric(
+                                      horizontal: 60, vertical: 5))),
+                          onPressed: () {},
+                          child: Text(
+                            'حذف',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 18,
+                                color: Colors.black),
+                          )),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                      child: ElevatedButton(
+                          style: ButtonStyle(
+                              padding: MaterialStateProperty.all(
+                                  EdgeInsets.symmetric(
+                                      horizontal: 60, vertical: 5))),
+                          onPressed: () {},
+                          child: Text(
+                            'حفظ',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 18,
+                                color: Colors.black),
+                          )),
+                    ),
+                  ]),
+                ),
+                SizedBox(
+                  height: 10,
                 ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -125,30 +163,14 @@ class Course extends StatelessWidget {
                                   horizontal: 60, vertical: 5))),
                       onPressed: () {},
                       child: Text(
-                        'حفظ',
+                        'معاينة',
                         style: TextStyle(
                             fontFamily: "Cairo",
                             fontSize: 18,
                             color: Colors.black),
                       )),
                 ),
-              ]),
-            ),
-            SizedBox(
-              height: 10,
-            ),
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 20.0),
-              child: ElevatedButton(
-                  style: ButtonStyle(
-                      padding: MaterialStateProperty.all(
-                          EdgeInsets.symmetric(horizontal: 60, vertical: 5))),
-                  onPressed: () {},
-                  child: Text(
-                    'معاينة',
-                    style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
-                  )),
+              ],
             ),
           ],
         ),

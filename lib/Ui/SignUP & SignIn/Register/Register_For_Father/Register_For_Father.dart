@@ -10,11 +10,11 @@ class Register_For_Father extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       body: SafeArea(
-        child: Center(
-          child: Column(
-            children: [
-              SingleChildScrollView(
-                child: Center(
+        child: SingleChildScrollView(
+          child: Center(
+            child: Column(
+              children: [
+                Center(
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
@@ -63,8 +63,8 @@ class Register_For_Father extends StatelessWidget {
                     ],
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),

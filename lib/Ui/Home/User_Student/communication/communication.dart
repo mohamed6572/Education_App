@@ -29,10 +29,22 @@ class communication extends StatelessWidget {
                     spreadRadius: 0,
                     blurRadius: 8),
               ], borderRadius: BorderRadius.circular(25), color: Colors.white),
-              child: Text(
-                '..........نص الرسالة',
-                style: Theme.of(context).textTheme.headline1,
-                textAlign: TextAlign.end,
+              child: TextFormField(
+                minLines: 1,
+                maxLines: 9,
+                decoration: InputDecoration(
+                    hintText: '..........نص الرسالة',
+                    hintStyle: TextStyle(
+                      fontFamily: "Cairo",
+                      fontSize: 18,
+                      color: Colors.black,
+                    ),
+                    enabledBorder: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(18),
+                      borderSide: BorderSide(
+                        color: Colors.transparent,
+                      ),
+                    )),
               ),
             ),
             SizedBox(

@@ -87,6 +87,23 @@ class Add extends StatelessWidget {
                             blurRadius: 6),
                       ],
                       color: Colors.white),
+                  child: TextFormField(
+                    minLines: 1,
+                    maxLines: 9,
+                    decoration: InputDecoration(
+                        hintText: '..........نص الرسالة',
+                        hintStyle: TextStyle(
+                          fontFamily: "Cairo",
+                          fontSize: 18,
+                          color: Colors.black,
+                        ),
+                        enabledBorder: OutlineInputBorder(
+                          borderRadius: BorderRadius.circular(18),
+                          borderSide: BorderSide(
+                            color: Colors.transparent,
+                          ),
+                        )),
+                  ),
                 ),
                 SizedBox(
                   height: 30,

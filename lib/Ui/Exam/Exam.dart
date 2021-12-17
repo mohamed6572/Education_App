@@ -112,7 +112,7 @@ class Exam extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Text(
-                    '. ٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة ',
+                    '٤- بعد انتهاء الامتحان يمكنك معرفة الاجابة الخاطئة. ',
                     textAlign: TextAlign.end,
                     style: TextStyle(
                       fontFamily: "Cairo",

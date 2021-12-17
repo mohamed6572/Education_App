@@ -1,3 +1,4 @@
+import 'package:education_app/Ui/Exam/Exam_Screan.dart';
 import 'package:education_app/Ui/Home/User_Student/Category_Screan/Item_Category.dart';
 import 'package:flutter/material.dart';
 
@@ -73,7 +74,9 @@ class CategoryDetailsScrean extends StatelessWidget {
           ),
           Center(
             child: ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.pushNamed(context, Exam_Screan.routeName);
+              },
               child: Text(
                 'ابدأ الاختبار',
                 style: TextStyle(
