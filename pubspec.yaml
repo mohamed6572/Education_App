@@ -37,6 +37,10 @@ dependencies:
   intl: ^0.17.0 # Add this line
   google_fonts: ^2.1.0
   carousel_slider: ^4.0.0
+  image_picker: ^0.8.4+4
+  path_provider: ^2.0.8
+
+
 
 
 

@@ -1,5 +1,4 @@
 import 'package:education_app/MyThemeData.dart';
-import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Student/studentWidget.dart';
 import 'package:flutter/material.dart';
 
 class Add_stud extends StatelessWidget {
@@ -43,13 +42,13 @@ class Add_stud extends StatelessWidget {
                 SizedBox(
                   height: MediaQuery.of(context).size.height * 0.02,
                 ),
-                studentWidget('الاسم '),
-                studentWidget(' المرحلة'),
-                studentWidget('الصف '),
-                studentWidget('  رقم هاتف ولي الامر '),
-                studentWidget(' رقم الهاتف '),
-                studentWidget('    رساله التأكيد '),
-                studentWidget('الباسورد '),
+                // studentWidget('الاسم '),
+                // studentWidget(' المرحلة'),
+                // studentWidget('الصف '),
+                // studentWidget('  رقم هاتف ولي الامر '),
+                // studentWidget(' رقم الهاتف '),
+                // studentWidget('    رساله التأكيد '),
+                // studentWidget('الباسورد '),
                 SizedBox(
                   height: 30,
                 ),
