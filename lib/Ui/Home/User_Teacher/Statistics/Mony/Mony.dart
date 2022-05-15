@@ -1,5 +1,6 @@
 import 'package:education_app/Ui/Home/User_Teacher/Statistics/Mony/Month.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Statistics/Mony/Note_Mony.dart';
+import 'package:education_app/shared/components/constens.dart';
 import 'package:flutter/material.dart';
 
 class Mony extends StatefulWidget {
@@ -13,6 +14,9 @@ class _MonyState extends State<Mony> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        backgroundColor: defultColor,
+      ),
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
         child: Column(
@@ -30,7 +34,7 @@ class _MonyState extends State<Mony> {
                       style: TextStyle(
                           fontFamily: "Cairo",
                           fontSize: 18,
-                          color: Colors.black),
+                          color: Colors.white),
                     )),
                 ElevatedButton(
                     onPressed: () {
@@ -42,7 +46,7 @@ class _MonyState extends State<Mony> {
                       style: TextStyle(
                           fontFamily: "Cairo",
                           fontSize: 18,
-                          color: Colors.black),
+                          color: Colors.white),
                     )),
               ],
             ),

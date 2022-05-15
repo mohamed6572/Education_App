@@ -1,6 +1,7 @@
 import 'package:country_code_picker/country_code_picker.dart';
 import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Father/Register_For_Father.dart';
 import 'package:education_app/Ui/parent/parent.dart';
+import 'package:education_app/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class Login_Screan_for_parent extends StatefulWidget {
@@ -13,6 +14,8 @@ class Login_Screan_for_parent extends StatefulWidget {
 class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
   bool isvisable = true;
   bool? _checked = false;
+  var phoneController = TextEditingController();
+  var passwordController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -22,175 +25,143 @@ class _Login_Screan_parentState extends State<Login_Screan_for_parent> {
         child: SingleChildScrollView(
           child: Center(
             child: Padding(
-              padding: const EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(20.0),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   SizedBox(
                     // height: 10,
-                    height: MediaQuery.of(context).size.height * 0.03,
+                    height: MediaQuery.of(context).size.height * 0.02,
                   ),
                   Image.asset(
-                    'assets/images/loogo.png',
-                    height: 250,
+                    'assets/app_logo.jpeg',
+                    height: 190,
                     width: 200,
                   ),
                   SizedBox(
                     height: 30,
                   ),
                   Text(
-                    'قم بتسجيل الدخول ك ولي أمر الان',
+                    'قم بتسجيل الدخول ك ولي امر الان',
                     style: TextStyle(
                         fontFamily: "Cairo", fontSize: 23, color: Colors.black),
                     textAlign: TextAlign.center,
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 20,
                   ),
-                  Container(
-                    margin: EdgeInsets.all(2),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.blue, width: 2)),
-                    child: Row(children: [
-                      Expanded(
-                        flex: 1,
-                        child: CountryCodePicker(
-                          showFlagMain: true,
-                          initialSelection: 'EG',
-                          showCountryOnly: true,
-                          alignLeft: true,
-                          favorite: ['EG'],
-                        ),
+                  Row(children: [
+                    Expanded(
+                      flex: 1,
+                      child: CountryCodePicker(
+                        showFlagMain: true,
+                        initialSelection: 'EG',
+                        showCountryOnly: true,
+                        alignLeft: true,
+                        favorite: ['EG'],
                       ),
-                      Expanded(
-                        flex: 2,
-                        child: Padding(
-                          padding: const EdgeInsets.only(right: 8.0),
-                          child: TextFormField(
-                            decoration: InputDecoration(
-                                enabledBorder: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(30),
-                              borderSide: BorderSide(
-                                color: Colors.transparent,
-                              ),
-                            )),
-                          ),
-                        ),
-                      )
-                    ]),
-                  ),
-                  Container(
-                    margin: EdgeInsets.all(5),
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        border: Border.all(color: Colors.blue, width: 2)),
-                    child: Padding(
-                      padding: const EdgeInsets.only(left: 10, right: 10.0),
-                      child: TextFormField(
+                    ),
+                    Expanded(
+                      flex: 2,
+                      child:
+                      defultFormField(
+                        type: TextInputType.visiblePassword,
+                        controller: phoneController,
+                        label: '+00000000',
+                        border: OutlineInputBorder(),
                         validator: (text) {
                           if (text == null || text.trim().isEmpty) {
-                            return 'Please Enter Password';
-                          }
-                          if (text.length < 6) {
-                            return 'password should be at least 6 chars';
+                            return 'Please Enter phone number';
                           }
                           return null;
                         },
-                        decoration: InputDecoration(
-                          hintText: ' Password',
-                          enabledBorder: OutlineInputBorder(
-                            borderRadius: BorderRadius.circular(20),
-                            borderSide: BorderSide(
-                              color: Colors.transparent,
-                            ),
-                          ),
-                          suffixIcon: IconButton(
-                            icon: isvisable
-                                ? Icon(Icons.visibility_off)
-                                : Icon(Icons.visibility),
-                            onPressed: () =>
-                                setState(() => isvisable = !isvisable),
-                          ),
-                        ),
-                        obscureText: isvisable,
                       ),
-                    ),
+
+                    )
+                  ]),
+                  SizedBox(height: 20,),
+                  defultFormField(
+                    type: TextInputType.visiblePassword,
+                    controller: passwordController,
+                    label: ' Password',
+                    isPassword: true,
+                    suffix: Icons.visibility,
+                    prefix: Icons.lock,
+                    validator: (text) {
+                      if (text == null || text.trim().isEmpty) {
+                        return 'Please Enter Password';
+                      }
+                      if (text.length < 6) {
+                        return 'password should be at least 6 chars';
+                      }
+                      return null;
+                    },
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 10.0),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceAround,
-                      children: [
-                        Row(
-                          children: [
-                            Text(
-                              'تذكرني لاحقا',
-                              style: TextStyle(
-                                  fontFamily: "Cairo",
-                                  fontSize: 15,
-                                  color: Colors.black),
-                            ),
-                            Checkbox(
-                                value: _checked,
-                                onChanged: (bool? value) {
-                                  setState(() {
-                                    _checked = value;
-                                  });
-                                }),
-                          ],
-                        ),
-                        TextButton(
-                            onPressed: () {},
-                            child: Text(
-                              'هل نسيت الرقم السري؟',
-                              style: TextStyle(
-                                  fontFamily: "Cairo",
-                                  fontSize: 15,
-                                  color: Colors.blue),
-                            )),
-                      ],
-                    ),
-                  ),
-                  SizedBox(
-                    // height: 10,
-                    height: MediaQuery.of(context).size.height * 0.18,
-                  ),
-                  Container(
-                    child: ElevatedButton(
-                        onPressed: () {
-                          Navigator.pushNamed(context, parent.routeName);
-                        },
-                        child: Padding(
-                          padding: const EdgeInsets.all(12.0),
-                          child: Text(
-                            'تسجيل الدخول',
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
+                    children: [
+                      Row(
+                        children: [
+                          Text(
+                            'تذكرني لاحقا',
                             style: TextStyle(
                                 fontFamily: "Cairo",
                                 fontSize: 15,
-                                color: Colors.white),
+                                color: Colors.black),
                           ),
-                        )),
-                    width: 200,
+                          Checkbox(
+                              value: _checked,
+                              onChanged: (bool? value) {
+                                setState(() {
+                                  _checked = value;
+                                });
+                              }),
+                        ],
+                      ),
+                      TextButton(
+                          onPressed: () {},
+                          child: Text(
+                            'هل نسيت الرقم السري؟',
+                            style: TextStyle(
+                                fontFamily: "Cairo",
+                                fontSize: 15,
+                                color: Colors.blue),
+                          )),
+                    ],
+                  ),
+                  SizedBox(
+                    // height: 10,
+                    height: MediaQuery.of(context).size.height * 0.1,
+                  ),
+                  defultButton(
+                    borderColor: Colors.lightBlue,
+                    radius: 30,
+                    text: 'تسجيل الدخول',
+                    textSize: 17,
+                    isUpperCase: true,
+                    function: (){
+                      navigateTo(context, parent());
+                    },
                   ),
                   SizedBox(
                     height: 10,
                   ),
-                  TextButton(
-                      onPressed: () {
-                        Navigator.pushReplacementNamed(
-                            context, Register_For_Father.routeName);
-                      },
-                      child: Text(
-                        'تسجيل حساب جديد',
-                        style: TextStyle(
-                            fontFamily: "Cairo",
-                            fontSize: 18,
-                            color: Colors.blue),
-                      )),
+                  defultButton(
+                    textColor: Colors.blue,
+                    borderColor: Colors.blue,
+                    radius: 30,
+                    Background: Colors.white,
+                    text: 'تسجيل حساب جديد',
+                    textSize: 17,
+                    isUpperCase: true,
+                    function: (){
+                      navigateTo(context, Register_For_Father());
+                    },
+                  ),
+
                 ],
               ),
             ),

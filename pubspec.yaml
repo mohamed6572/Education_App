@@ -37,6 +37,16 @@ dependencies:
   intl: ^0.17.0 # Add this line
   google_fonts: ^2.1.0
   carousel_slider: ^4.0.0
+  image_picker: ^0.8.4+4
+  path_provider: ^2.0.8
+  firebase_core: "^1.10.0"
+  firebase_auth: "^3.2.0"
+  pinput: ^1.2.0
+  smooth_page_indicator: ^1.0.0+2
+
+
+
+
 
 
 
@@ -55,7 +65,7 @@ dev_dependencies:
 flutter_icons:
   android: true
   ios: true
-  image_path: "assets/app_logo.png"
+  image_path: "assets/app_logo.jpeg"
 
 
 
@@ -81,6 +91,8 @@ flutter:
   assets:
     - assets/images/
     - assets/subjects/
+    - assets/onboarding/
+    - assets/
   #   - images/a_dot_ham.jpeg
 
   # An image asset can refer to one or more resolution-specific "variants", see

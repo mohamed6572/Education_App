@@ -1,3 +1,7 @@
+import 'package:education_app/Ui/Home/User_Student/account_stud.dart';
+import 'package:education_app/shared/components/components.dart';
+import 'package:education_app/shared/components/constens.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import 'Item_Category.dart';
@@ -44,22 +48,92 @@ class CategoriesScrean extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.all(12),
+    return Padding(
+      padding: const EdgeInsetsDirectional.only(
+        start: 20.0,
+        top: 10,
+        end: 20,
+      ),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.end,
         children: [
+          SizedBox(
+            height: 20,
+          ),
+          Container(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.595,
+                          child: Text(
+                            'اهلا بك يا احمد',
+                            textAlign: TextAlign.center,
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 2,
+                            style: TextStyle(color: defultColor, fontSize: 20),
+                          ),
+                        ),
+                        SizedBox(
+                          height: 15,
+                        ),
+
+                      ],
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(6.0),
+                    child: Image(
+                        height: 90,
+                        width: 90,
+                        image: AssetImage('assets/images/teacher.jpg')),
+                  ),
+                ],
+              ),
+              decoration: BoxDecoration(
+                color: Colors.white,
+                borderRadius: BorderRadius.circular(8),
+                boxShadow: [
+                  BoxShadow(
+                      color: Colors.grey,
+                      offset: Offset(0, 4),
+                      spreadRadius: 0,
+                      blurRadius: 1),
+                ],
+              ),
+              width: double.infinity,
+              height: 100.0),
+          SizedBox(
+            height: 10,
+          ),
+          Text(
+            'المواد الدراسية',
+            style: Theme.of(context)
+                .textTheme
+                .headline5
+                ?.copyWith(fontWeight: FontWeight.bold),
+          ),
+          SizedBox(
+            height: 10,
+          ),
           Expanded(
               child: GridView.builder(
-            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 8),
-            itemBuilder: (buildContext, index) {
-              return CategoryGridWidget(categories[index], index, (category) {
-                onCategoryClickCallBack(category);
-              });
-            },
-            itemCount: categories.length,
-          )),
+                physics: BouncingScrollPhysics(),
+                shrinkWrap: true,
+                gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                    crossAxisCount: 2, crossAxisSpacing: 8, mainAxisSpacing: 8),
+                itemBuilder: (buildContext, index) {
+                  return CategoryGridWidget(categories[index], index, (category) {
+                    onCategoryClickCallBack(category);
+                  });
+                },
+                itemCount: categories.length,
+              )),
         ],
       ),
     );

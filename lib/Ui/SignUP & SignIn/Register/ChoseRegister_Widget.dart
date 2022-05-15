@@ -20,7 +20,9 @@ class ChoseRegister_Widget extends StatelessWidget {
         Text(
           Name,
           style: TextStyle(
-              color: Colors.black, fontWeight: FontWeight.bold, fontSize: 18),
+              color: Colors.black,
+              fontFamily: "Cairo",
+              fontWeight: FontWeight.bold, fontSize: 18),
         ),
       ],
     );

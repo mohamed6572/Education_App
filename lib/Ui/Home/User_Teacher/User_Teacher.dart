@@ -3,22 +3,117 @@ import 'package:education_app/Ui/Home/User_Teacher/Add_Exam/Add_Exam.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Add_stud/conection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Collection/Collection.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Course/Course.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Course/add_course.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Home/Home.dart';
+import 'package:education_app/Ui/Home/User_Teacher/Home/licence_stud.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Statistics/Statistics.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Stream_Teacher/Stream_Teacher.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Supervisor/Add_Supervisor.dart';
 import 'package:education_app/Ui/Home/User_Teacher/account_tech.dart';
 import 'package:education_app/Ui/Home/User_Teacher/teacher_Widget/teacher_Widget.dart';
+import 'package:education_app/models/StartScreanModel.dart';
+import 'package:education_app/shared/components/components.dart';
+import 'package:education_app/shared/components/constens.dart';
 import 'package:flutter/material.dart';
 
 import 'Add/Add_stud.dart';
 import 'Add_stud/Add_stud.dart';
 
-class User_Teacher extends StatelessWidget {
+int currentIndex = 0;
+
+class User_Teacher extends StatefulWidget {
   static const String routeName = 'TEach';
 
   @override
+  State<User_Teacher> createState() => _User_TeacherState();
+}
+
+class _User_TeacherState extends State<User_Teacher> {
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
+      floatingActionButtonLocation:
+          FloatingActionButtonLocation.miniCenterDocked,
+      extendBody: true,
+      floatingActionButton: FloatingActionButton(
+        elevation: 0,
+        backgroundColor: defultColor,
+        onPressed: () {
+          ShowBottSheet();
+        },
+        child: Icon(Icons.add),
+      ),
+
+      bottomNavigationBar: BottomAppBar(
+        shape: CircularNotchedRectangle(),
+       clipBehavior: Clip.hardEdge,
+       elevation: 10,
+       child: BottomNavigationBar(
+         onTap: (index) {
+           setState(() {
+             currentIndex = index;
+           });
+         },
+         currentIndex: currentIndex,
+         items: [
+           BottomNavigationBarItem(
+               icon: Icon(Icons.dashboard), label: 'الصفحة الرئيسية'),
+           BottomNavigationBarItem(icon: Icon(Icons.book), label: 'الكورسات'),
+           BottomNavigationBarItem(
+               icon: Icon(Icons.date_range), label: 'المواعيد'),
+           BottomNavigationBarItem(
+               icon: Icon(Icons.more_horiz), label: 'الاحصائيات'),
+         ],
+       ),
+      ),
+      body: screans[currentIndex],
+    );
+  }
+
+  void ShowBottSheet() => showModalBottomSheet(
+        context: context,
+        builder: (context) {
+          return SingleChildScrollView(
+            child: Container(
+              height: 350,
+              child: ListView.separated(
+                  itemBuilder:(context, index) => BuildBottomSheet(botList[index],context) ,
+                  separatorBuilder: (context, index) => myDivider(
+                      padEnd: 20.0,
+                      PadStart: 20.0
+                  ),
+                  itemCount: botList.length
+              ),
+            )
+          );
+        },
+      );
+  List<Widget> screans = [
+    Home_Teacher(),
+    Course(),
+    Course(),
+    Statistics(),
+  ];
+  Widget BuildBottomSheet(BottomSeetModel model,context)=>
+      defultTextButton(text: model.text,
+          function: () {
+    navigateTo(context, model.widget);
+  });
+
+  List<BottomSeetModel> botList=[
+    BottomSeetModel(text: 'إضافة كورس', widget: Add_Course()),
+    BottomSeetModel(text: 'إضافة مجموعة', widget: Collection()),
+    BottomSeetModel(text: 'إضافة بث مباشر', widget: Stream_Teacher()),
+    BottomSeetModel(text: 'إضافة مشرف', widget: Add_Supervisor()),
+    BottomSeetModel(text: 'إضافة امتحان', widget: Add_Exam()),
+    BottomSeetModel(text: 'إضافة طالب', widget: Add_stud()),
+    BottomSeetModel(text: 'إضافة إعلان', widget: Add()),
+    BottomSeetModel(text: 'ترخييص طالب', widget: licence_stud()),
+  ];
+}
+
+/*
+Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
         shape: RoundedRectangleBorder(
@@ -44,7 +139,8 @@ class User_Teacher extends StatelessWidget {
                       Navigator.pushNamed(context, account_tech.routeName);
                     },
                     child: Text(
-                      'مرحبا بك يا    \n استاذ احمد',
+                      'مرحبا بك يا استاذ احمد',
+                      textAlign: TextAlign.start,
                       style: TextStyle(
                           fontFamily: "Cairo",
                           fontSize: 13,
@@ -203,5 +299,4 @@ class User_Teacher extends StatelessWidget {
         ],
       ),
     );
-  }
-}
+ */

@@ -6,6 +6,9 @@ import 'package:education_app/Ui/Home/User_Student/Notification/Notification.dar
 import 'package:education_app/Ui/Home/User_Student/Stream/StreamDetailsScrean.dart';
 import 'package:education_app/Ui/Home/User_Student/account_stud.dart';
 import 'package:education_app/Ui/Home/User_Student/communication/communication.dart';
+import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Teacher/Register_For_Teacher.dart';
+import 'package:education_app/shared/components/components.dart';
+import 'package:education_app/shared/components/constens.dart';
 import 'package:flutter/material.dart';
 
 import 'Category_Screan/Item_Category.dart';
@@ -20,157 +23,201 @@ class User_Student extends StatefulWidget {
 
 class _User_StudentState extends State<User_Student> {
   int Index = 0;
+  late Category category;
 
+  String tex(index){
+    if(selectedCategory== null){
+     return 'Person';
+    }
+    else {
+     return '${selectedCategory?.title}';
+    }
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       appBar: AppBar(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(45))),
-        title: Text('Person'),
-        backgroundColor: MyThemeData.primaryColorDark,
-        actions: [
-          Expanded(
-            child: Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.15,
-                ),
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage('assets/images/stud_logo.jpg'),
-                ),
-                SizedBox(
-                  width: 5,
-                ),
-                InkWell(
-                    onTap: () {
-                      Navigator.pushNamed(context, account_stud.routeName);
-                    },
-                    child: Text(
-                      'مرحبا بك \n يا احمد',
-                      style: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 13,
-                          color: Colors.white),
-                    )),
-                Spacer(),
-                IconButton(
-                    onPressed: () {
-                      Index = 5;
-                      setState(() {});
-                    },
-                    icon: Icon(Icons.notifications)),
-                SizedBox(
-                  width: 10,
-                ),
-                IconButton(
-                    onPressed: () {
-                      Index = 4;
-                      setState(() {});
-                    },
-                    icon: Icon(Icons.settings)),
-                SizedBox(
-                  width: 10,
-                ),
-              ],
+        title: Text(tex(Index)
             ),
-          )
+        backgroundColor: defultColor,
+        actions: [
+          InkWell(
+            onTap: (){
+
+            },
+            child: defultIcon(
+                icon: Icons.message, size: 25.0, color: Colors.white),
+          ),
+          SizedBox(
+            width: 15,
+          ),
+          InkWell(
+            onTap: (){
+              Index = 5;
+              setState(() {});
+            },
+            child: defultIcon(
+                icon: Icons.notifications, size: 25.0, color: Colors.white),
+          ),
+          SizedBox(
+            width: 15,
+          ),
+          InkWell(
+              onTap: (){
+                Index =4;
+                setState(() {});
+              },
+              child: defultIcon(icon: Icons.settings, size: 25.0, color: Colors.white)),
+          SizedBox(
+            width: 20,
+          ),
         ],
       ),
       drawer: Drawer(
-        child: Column(
-          children: [
-            Container(
-              width: double.infinity,
-              padding: EdgeInsets.symmetric(vertical: 30),
-              color: Theme.of(context).primaryColor,
-              child: Text(
-                'EducationApp',
-                style: TextStyle(
-                    fontFamily: "Cairo", fontSize: 25, color: Colors.white),
-                textAlign: TextAlign.center,
+        child: SafeArea(
+          child: Column(
+            children: [
+             
+              Container(
+                width: double.infinity,
+                padding: EdgeInsets.symmetric(vertical: 30),
+                color: Theme.of(context).primaryColor,
+                child: Text(
+                  'EducationApp',
+                  style: TextStyle(
+                      fontFamily: "Cairo", fontSize: 25, color: Colors.black),
+                  textAlign: TextAlign.center,
+                ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-                Index = 0;
-                selectedCategory = null;
-                setState(() {});
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Index = 0;
+                  selectedCategory = null;
+                  setState(() {});
+                },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 70, vertical: 10),
-                  color: Colors.grey,
-                  child: Text(
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  color: defultColor,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                    Text(
                     'المواد الدراسية',
                     style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                        fontFamily: "Cairo",
+                        fontSize: 18,
+                        color: Colors.white),),
+                      SizedBox(width: 15,),
+
+                        Icon(Icons.school,size: 40,color: Colors.white),
+
+                      ],
                   ),
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-                Index = 1;
-                setState(() {});
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              SizedBox(height: 9,),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Index = 1;
+                  selectedCategory = null;
+                  setState(() {});
+                },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 90, vertical: 10),
-                  color: Colors.grey,
-                  child: Text(
-                    'الامتحانات',
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  color: defultColor,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                    Text('الامتحانات'
+                    ,
                     style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                        fontFamily: "Cairo",
+                        fontSize: 18,
+                        color: Colors.white),),
+                      SizedBox(width: 15,),
+
+                        Icon(Icons.assignment_outlined,size: 40,color: Colors.white),
+
+                      ],
                   ),
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-                Index = 2;
-                setState(() {});
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              SizedBox(height: 9,),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Index = 2;
+                  selectedCategory = null;
+                  setState(() {});
+                },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 80, vertical: 10),
-                  color: Colors.grey,
-                  child: Text(
-                    'البث المباشر',
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  color: defultColor,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                    Text('البث المباشر'
+                    ,
                     style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                        fontFamily: "Cairo",
+                        fontSize: 18,
+                        color: Colors.white),),
+                      SizedBox(width: 15,),
+
+                        Icon(Icons.stream,size: 40,color: Colors.white),
+
+                      ],
                   ),
                 ),
               ),
-            ),
-            InkWell(
-              onTap: () {
-                Navigator.pop(context);
-                Index = 3;
-                setState(() {});
-              },
-              child: Padding(
-                padding: const EdgeInsets.all(10.0),
+              SizedBox(height: 9,),
+              InkWell(
+                onTap: () {
+                  Navigator.pop(context);
+                  Index = 3;
+                  selectedCategory = null;
+                  setState(() {});
+                },
                 child: Container(
-                  padding: EdgeInsets.symmetric(horizontal: 90, vertical: 10),
-                  color: Colors.grey,
-                  child: Text(
-                    'التواصل',
+                  padding: EdgeInsets.symmetric(horizontal: 10, vertical: 10),
+                  color: defultColor,
+                  child: Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                    Text('التواصل'
+                    ,
                     style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
+                        fontFamily: "Cairo",
+                        fontSize: 18,
+                        color: Colors.white),),
+                      SizedBox(width: 15,),
+
+                        Icon(Icons.insert_comment_rounded,size: 40,color: Colors.white,),
+
+                      ],
                   ),
                 ),
               ),
-            ),
-          ],
+
+
+              Spacer(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceAround,
+                children: [
+                  Image(image: AssetImage('assets/fac.png'),height: 80,width: 80,),
+                  Image(image: AssetImage('assets/wah.png'),height: 45,width: 45,),
+                  Image(image: AssetImage('assets/tel.png'),height: 50,width: 50,),
+                  Image(image: AssetImage('assets/botim.png'),height: 45,width: 45,),
+                ],),
+
+
+
+
+              SizedBox(height: 50,),
+            ],
+          ),
         ),
       ),
       body: ViewsIndex(Index),

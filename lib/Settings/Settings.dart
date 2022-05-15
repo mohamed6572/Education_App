@@ -17,7 +17,7 @@ class _SettingsState extends State<Settings> {
   Widget build(BuildContext context) {
     var provider = Provider.of<AppConfigProvider>(context);
     return Container(
-      padding: EdgeInsets.all(10),
+      padding: EdgeInsets.all(15),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
@@ -40,18 +40,18 @@ class _SettingsState extends State<Settings> {
                   borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.blue,
-                        offset: Offset(0, 2),
+                        color: Colors.black,
+                        offset: Offset(0, 1),
                         spreadRadius: 0,
-                        blurRadius: 6),
+                        blurRadius: 1),
                   ],
-                  border: Border.all(color: Colors.blue)),
+                  border: Border.all(color: Colors.black)),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
                     provider.appLanguage == 'en' ? "English" : "العربية",
-                    style: TextStyle(color: Theme.of(context).primaryColor),
+                    style: TextStyle(color: Colors.black),
                   ),
                   Icon(
                     Icons.arrow_drop_down_sharp,
@@ -75,12 +75,12 @@ class _SettingsState extends State<Settings> {
               decoration: BoxDecoration(
                   boxShadow: [
                     BoxShadow(
-                        color: Colors.blue,
-                        offset: Offset(0, 2),
+                        color: Colors.black,
+                        offset: Offset(0, 1),
                         spreadRadius: 0,
-                        blurRadius: 6),
+                        blurRadius: 1),
                   ],
-                  border: Border.all(color: Colors.blue),
+                  border: Border.all(color: Colors.black),
                   color: Colors.white,
                   borderRadius: BorderRadius.circular(12)),
               child: Row(
@@ -88,7 +88,7 @@ class _SettingsState extends State<Settings> {
                 children: [
                   Text(
                     provider.appTheme == ThemeMode.light ? "المضئ" : "المظلم",
-                    style: TextStyle(color: Theme.of(context).primaryColor),
+                    style: TextStyle(color: Colors.black),
                   ),
                   Icon(
                     Icons.arrow_drop_down_sharp,
