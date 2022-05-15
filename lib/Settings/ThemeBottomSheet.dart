@@ -40,7 +40,7 @@ class ThemeBottomSheet extends StatelessWidget {
           Text(
             text,
             style:
-                TextStyle(fontSize: 18, color: Theme.of(context).primaryColor),
+                TextStyle(fontSize: 18, color: Colors.green),
           ),
           Icon(Icons.check, color: Theme.of(context).primaryColor)
         ],

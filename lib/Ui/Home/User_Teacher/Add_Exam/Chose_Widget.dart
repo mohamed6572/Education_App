@@ -23,10 +23,10 @@ class Chose_Widget extends StatelessWidget {
                 borderRadius: BorderRadius.circular(18),
                 boxShadow: [
                   BoxShadow(
-                      color: Colors.blue,
-                      offset: Offset(0, 2),
+                      color: Colors.black,
+                      offset: Offset(0, 0),
                       spreadRadius: 0,
-                      blurRadius: 6),
+                      blurRadius: 1),
                 ],
                 color: Colors.white),
           )

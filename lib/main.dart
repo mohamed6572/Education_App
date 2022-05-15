@@ -17,6 +17,7 @@ import 'package:education_app/Ui/SignUP%20&%20SignIn/Login/Login_Screan_for_Stud
 import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Chose_Register.dart';
 import 'package:education_app/Ui/parent/parent.dart';
 import 'package:education_app/provider/AppConfigProvider.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'Settings/Settings.dart';
@@ -30,13 +31,17 @@ import 'Ui/SignUP & SignIn/Register/Register_For_Father/Register_For_Father.dart
 import 'Ui/SignUP & SignIn/Register/Register_For_Student/Register_For_Student.dart';
 import 'Ui/SignUP & SignIn/Register/Register_For_Teacher/Register_For_Teacher.dart';
 import 'Ui/parent/account.dart';
+import 'onBoarding/onBoarding.dart';
 
-void main() => runApp(ChangeNotifierProvider(
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+await Firebase.initializeApp();
+  runApp(ChangeNotifierProvider(
       create: (BuildContext) {
         return AppConfigProvider();
       },
       child: MyApp(),
-    ));
+    ));}
 
 class MyApp extends StatelessWidget {
   @override
@@ -45,6 +50,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'Education_App',
       locale: Locale('en'),
+
       theme: MyThemeData.LightTheme,
       darkTheme: MyThemeData.DarkTheme,
       routes: {
@@ -81,7 +87,7 @@ class MyApp extends StatelessWidget {
         Contact.routeName: (context) => Contact(),
         conection.routeName: (context) => conection(),
       },
-      initialRoute: Start_Screan.routeName,
+      home: onBoarding(),
     );
   }
 }

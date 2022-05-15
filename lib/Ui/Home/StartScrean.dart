@@ -14,7 +14,7 @@ class Start_Screan extends StatelessWidget {
           children: [
             Spacer(),
             Image.asset(
-              'assets/images/loogo.png',
+              'assets/images/app_logo.jpeg',
               width: 200,
               height: 200,
             ),
@@ -31,25 +31,29 @@ class Start_Screan extends StatelessWidget {
                     fontFamily: "Cairo", fontSize: 25, color: Colors.black),
               ),
             ),
-Spacer(),
+            Spacer(),
             Column(
               children: [
-                Text('Designed',
-                textAlign: TextAlign.center,
-                style: Theme.of(context).textTheme.headline1!.copyWith(
-                  fontSize: 25
-                ),
-                ),
-                Text('By Mohamed Hany',
+                Text(
+                  'Designed',
                   textAlign: TextAlign.center,
-
-                  style: Theme.of(context).textTheme.headline1!.copyWith(
-                      fontSize: 25
-                  ),
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline1!
+                      .copyWith(fontSize: 25),
+                ),
+                Text(
+                  'By Mohamed Hany',
+                  textAlign: TextAlign.center,
+                  style: Theme.of(context)
+                      .textTheme
+                      .headline1!
+                      .copyWith(fontSize: 25),
                 ),
               ],
-            ), SizedBox(
-              height: MediaQuery.of(context).size.height*0.05,
+            ),
+            SizedBox(
+              height: MediaQuery.of(context).size.height * 0.05,
             ),
           ],
         ),

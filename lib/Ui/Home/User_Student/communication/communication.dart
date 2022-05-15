@@ -24,10 +24,10 @@ class communication extends StatelessWidget {
               width: MediaQuery.of(context).size.width * 0.9,
               decoration: BoxDecoration(boxShadow: [
                 BoxShadow(
-                    color: Colors.blue,
-                    offset: Offset(0, 2),
+                    color: Colors.black,
+                    offset: Offset(0, 0),
                     spreadRadius: 0,
-                    blurRadius: 8),
+                    blurRadius: 1),
               ], borderRadius: BorderRadius.circular(25), color: Colors.white),
               child: TextFormField(
                 minLines: 1,
@@ -50,7 +50,7 @@ class communication extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            Row(mainAxisAlignment: MainAxisAlignment.end, children: [
+            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
               Padding(
                 padding:
                     const EdgeInsets.symmetric(vertical: 10.0, horizontal: 20),
@@ -61,7 +61,7 @@ class communication extends StatelessWidget {
                     onPressed: () {},
                     child: Text(
                       'إرسال',
-                      style: Theme.of(context).textTheme.headline1,
+                      style: Theme.of(context).textTheme.headline1?.copyWith(fontFamily: 'Cairo',color: Colors.white),
                     ),
                   ),
                 ),

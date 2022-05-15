@@ -62,11 +62,12 @@ class CategoryGridWidget extends StatelessWidget {
   }
 }
 
+
+
 class Category {
   String title;
   String imagePath;
   Color Background;
 
   Category(
-      {required this.title, required this.imagePath, required this.Background});
-}
+      {required this.title, required this.imagePath, required this.Background});}

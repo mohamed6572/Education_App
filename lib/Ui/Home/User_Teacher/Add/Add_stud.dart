@@ -1,5 +1,6 @@
 import 'package:education_app/MyThemeData.dart';
 import 'package:education_app/Ui/Home/User_Teacher/Course/widget_Course.dart';
+import 'package:education_app/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 class Add extends StatelessWidget {
@@ -8,120 +9,57 @@ class Add extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
-      appBar: AppBar(
-        shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.vertical(bottom: Radius.circular(45))),
-        title: Text('Person'),
-        backgroundColor: MyThemeData.primaryColorDark,
-        actions: [
-          Expanded(
-            child: Row(
-              children: [
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.13,
-                ),
-                CircleAvatar(
-                  radius: 20,
-                  backgroundImage: AssetImage('assets/images/teacher.jpg'),
-                ),
-                SizedBox(
-                  width: 9,
-                ),
-                Text(
-                  'مرحبا بك يا   \n استاذ احمد',
-                  style: TextStyle(
-                      fontFamily: "Cairo", fontSize: 13, color: Colors.white),
-                ),
-              ],
-            ),
-          )
-        ],
-      ),
+      appBar: AppBar(),
+
       body: SingleChildScrollView(
-        child: Column(
-          children: [
-            SizedBox(
-              height: MediaQuery.of(context).size.height * 0.02,
-            ),
-            ClipRRect(
-              borderRadius: BorderRadius.circular(80),
-              child: Container(
-                width: 150,
-                height: 150,
-                color: Colors.blue,
-                child: Icon(Icons.add),
+        child: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Column(
+
+            crossAxisAlignment: CrossAxisAlignment.stretch,
+            children: [
+              Center(
+                child: defultContainer(widget: Icon(Icons.add),
+                    width: 150.0,
+                    height: 150.0,
+                    radius: 80.0
+
+                ),
               ),
-            ),
-            Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
+              SizedBox(
+                height: MediaQuery.of(context).size.height * 0.02,
+              ),
+              Course_Wiget('اسم الاعلان'),
+              SizedBox(
+                height: 20,
+              ),
+              Padding(
+                padding: const EdgeInsets.all(8.0),
+                child: Text(
+                  'وصف الاعلان',
+                  textAlign: TextAlign.end,
+                  style: TextStyle(
+
+                      fontFamily: "Cairo", fontSize: 18, color: Colors.black),
                 ),
-                Course_Wiget('اسم الاعلان'),
-                SizedBox(
-                  height: 20,
+              ),
+              defultFormField(label: 'your message....',
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(20),
                 ),
-                Padding(
-                  padding: const EdgeInsets.all(8.0),
-                  child: Text(
-                    'وصف الاعلان',
-                    textAlign: TextAlign.end,
-                    style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.black),
-                  ),
-                ),
-                Container(
-                  padding: EdgeInsets.all(10),
-                  margin: EdgeInsets.all(10),
-                  width: 200,
-                  height: 200,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(18),
-                      boxShadow: [
-                        BoxShadow(
-                            color: Colors.blue,
-                            offset: Offset(0, 2),
-                            spreadRadius: 0,
-                            blurRadius: 6),
-                      ],
-                      color: Colors.white),
-                  child: TextFormField(
-                    minLines: 1,
-                    maxLines: 9,
-                    decoration: InputDecoration(
-                        hintText: '..........نص الرسالة',
-                        hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black,
-                        ),
-                        enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(18),
-                          borderSide: BorderSide(
-                            color: Colors.transparent,
-                          ),
-                        )),
-                  ),
-                ),
-                SizedBox(
-                  height: 30,
-                ),
-              ],
-            ),
-            Container(
-              width: 100,
-              height: 50,
-              child: ElevatedButton(
-                  onPressed: () {},
-                  child: Text(
-                    'اضف',
-                    style: TextStyle(
-                        fontFamily: "Cairo", fontSize: 18, color: Colors.white),
-                  )),
-            )
-          ],
+                maxlines: 4,
+                minlines: 1
+
+              ),
+              SizedBox(
+                height: 30,
+              ),
+              defultButton(text: 'اضف', function: (){},
+              textSize: 20,
+                radius: 20
+              )
+            ],
+          ),
         ),
       ),
     );

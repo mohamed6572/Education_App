@@ -17,6 +17,7 @@ class _Supervisor_WidgetState extends State<Supervisor_Widget> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Text(
             widget.text,

@@ -1,7 +1,9 @@
 import 'dart:io';
 
-
+import 'package:education_app/Ui/SignUP%20&%20SignIn/Login/Login_Screan_for_Student.dart';
 import 'package:education_app/Ui/SignUP%20&%20SignIn/Login/Login_Screan_for_teacher.dart';
+import 'package:education_app/Ui/SignUP%20&%20SignIn/Register/Register_For_Teacher/otp.dart';
+import 'package:education_app/shared/components/components.dart';
 import 'package:flutter/material.dart';
 
 import 'package:image_picker/image_picker.dart';
@@ -18,10 +20,8 @@ class Register_For_Teacher extends StatefulWidget {
 }
 
 class _Register_For_TeacherState extends State<Register_For_Teacher> {
-  // XFile? _imageFile;
 
   File? image;
-  // final ImagePicker _picker = ImagePicker();
 
   Future pichkImage(ImageSource source) async {
     final image = await ImagePicker().pickImage(source: source);
@@ -44,179 +44,123 @@ class _Register_For_TeacherState extends State<Register_For_Teacher> {
       body: SafeArea(
         child: SingleChildScrollView(
             child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Form(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.02,
-                ),
-                Stack(
+              padding: const EdgeInsets.all(20.0),
+              child: Form(
+                child: Column(
                   children: [
-                    ClipOval(
-                      child: image != null
-                          ? Image.file(
-                              image!,
-                              width: 150,
-                              height: 140,
-                              fit: BoxFit.cover,
-                            )
-                          : FlutterLogo(
-                              size: 150,
-                            ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.02,
                     ),
-                    Positioned(
-                        bottom: 20,
-                        right: 20,
-                        child: InkWell(
-                          onTap: () {
-                            showModalBottomSheet(
-                                context: context,
-                                builder: (buildContext) => bottomSheet());
-                          },
-                          child: Icon(
-                            Icons.camera_alt,
-                            size: 28,
-                            color: Colors.teal,
+                    Stack(
+                      children: [
+                        ClipOval(
+                          child: image != null
+                              ? Image.file(
+                            image!,
+                            width: 150,
+                            height: 140,
+                            fit: BoxFit.cover,
+                          )
+                              : FlutterLogo(
+                            size: 150,
                           ),
-                        )),
+                        ),
+                        Positioned(
+                            bottom: 20,
+                            right: 20,
+                            child: InkWell(
+                              onTap: () {
+                                showModalBottomSheet(
+                                    context: context,
+                                    builder: (buildContext) => bottomSheet());
+                              },
+                              child: Icon(
+                                Icons.camera_alt,
+                                size: 28,
+                                color: Colors.teal,
+                              ),
+                            )),
+                      ],
+                    ),
+                    SizedBox(
+                      height: MediaQuery.of(context).size.height * 0.05,
+                    ),
+                    defultFormField(
+                      label: "الاسم",
+                      prefix: Icons.person,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    defultFormField(
+                      label: "اسم المادة",
+                      prefix: Icons.stacked_line_chart,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    defultFormField(
+                      label:  "نبذة مختصرة",
+                      prefix: Icons.stacked_bar_chart,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+
+                    defultFormField(
+                      label: "رقم الهاتف",
+                      prefix: Icons.phone,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    defultFormField(
+                      label: "رسالة التأكيد",
+                      prefix: Icons.message,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    defultFormField(
+                      label: "الباسورد",
+                      prefix: Icons.lock,
+                      textSize: 18,
+                      textColor: Colors.black,
+                      border: OutlineInputBorder(),
+                    ),
+                    SizedBox(
+                      height: 10,
+                    ),
+                    defultButton(
+                        text: 'إنشاء حساب',
+                        textSize: 18,
+                        radius: 20,
+                        function: () {
+                          navigateTo(context, Login_Screan_for_teacher());
+                        })
                   ],
                 ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.05,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "الاسم",
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "اسم المادة",
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "نبذة مختصرة",
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "رقم الهاتف",
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: "رسالة التأكيد",
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 10,
-                ),
-                TextFormField(
-                  decoration: InputDecoration(
-                      hintText: 'الباسورد',
-                      hintStyle: TextStyle(
-                          fontFamily: "Cairo",
-                          fontSize: 18,
-                          color: Colors.black),
-                      enabledBorder: OutlineInputBorder(
-                          borderRadius: BorderRadius.circular(20),
-                          borderSide:
-                              BorderSide(width: 2, color: Colors.blue))),
-                ),
-                SizedBox(
-                  height: 19,
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 10),
-                  child: ElevatedButton(
-                      onPressed: () {
-                        Navigator.pushNamed(
-                            context, Login_Screan_for_teacher.routeName);
-                      },
-                      child: Padding(
-                        padding: const EdgeInsets.all(14.0),
-                        child: Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                          children: [
-                            Text(
-                              'إنشاء حساب',
-                              style: TextStyle(
-                                  fontFamily: "Cairo",
-                                  fontSize: 18,
-                                  color: Colors.white),
-                            ),
-                            Icon(Icons.arrow_forward),
-                          ],
-                        ),
-                      )),
-                )
-              ],
-            ),
-          ),
-        )),
+              ),
+            )),
       ),
     );
   }
 
-//   Future takePhoto(ImageSource source)async{
-//     final PickedFile =await _picker.pickImage(
-//         source: source);
-//
-//     setState(() {
-// Register_For_Teacher.image=source.toString();
-//       _imageFile = PickedFile! ;
-//     });
-//   }
   Widget bottomSheet() {
     return Container(
       width: double.infinity,
@@ -256,4 +200,6 @@ class _Register_For_TeacherState extends State<Register_For_Teacher> {
       ),
     );
   }
+
+
 }

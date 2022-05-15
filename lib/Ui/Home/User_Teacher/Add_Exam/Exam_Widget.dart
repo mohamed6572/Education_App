@@ -17,6 +17,8 @@ class _Exam_Widget extends State<Exam_Widget> {
     return Padding(
       padding: const EdgeInsets.all(8.0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+
         children: [
           Text(
             widget.text,

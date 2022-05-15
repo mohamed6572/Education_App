@@ -22,12 +22,19 @@ class Chose_Register extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.10,
               ),
               Image.asset(
-                'assets/images/loogo.png',
+                'assets/app_logo.jpeg',
                 height: 200,
                 width: 200,
+              ), SizedBox(
+                height:20,
+              ),  Text(
+                'نخلق فكراً مختلفاً للتعليم',
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                    fontFamily: "Cairo", fontSize: 25,fontWeight: FontWeight.bold, color: Colors.black),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.10,
               ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
